@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+section,
+footer,
+header{
+    font-family: 'Nanum Gothic';
+}
+footer h2,
+header > nav.HeaderMenu ul li a,
+div.FullBox h3,
+div.TextBox span:last-of-type,
+section.LouisvuittonDetail div h4,
+section.LouisvuittonDetail div h3,
+section.LouisvuittonDetail h2,
+section.LussosoDetail div h4,
+section.LussosoDetail div h3,
+section.LussosoDetail h2,
+section.PortfolioArea div ul li div h3,
+section.PortfolioArea div ul li div span,
+section.PortfolioArea div h2,
+section.SkillArea > div h2,
+section.AboutArea div.Click span:first-of-type,
+section.AboutArea div.AboutmeBox2 h2,
+section.AboutArea div.AboutmeBox h2,
+section.IntroArea,
+header h1{
+    font-family: 'Raleway'
+}
+
+li{list-style: none;}
+a{text-decoration: none;}
+body{background-color: #1d1d1d;}
+.Shadow{text-shadow: 0 0 10px white, 0 0 20px white;}
+.BackgroundText{position: absolute; font-size: 150px; color: white; opacity: 0.1; z-index: -1; font-size: 250px; font-weight: 700; bottom: 0; right: 0;}
+section.SubPage,
+section.PortfolioArea div.PfWhite div.PfFull > div,
+section.PortfolioArea div.PfBlack,
+section.SkillArea div.SkillWhite,
+section.SkillArea div.SkillBlack,
+section.AboutArea div.AboutmeBox,
+footer > div{
+    max-width: 1300px; margin: 0 auto; width: 100%;
+}

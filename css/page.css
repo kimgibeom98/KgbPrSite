@@ -1,0 +1,220 @@
+    /* intro str */
+    section.IntroArea{display: flex; position: relative; width: calc(100% - 100px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
+    section.IntroArea > div.IntroText{ width: calc(100% - 250px); margin: 0 auto;}
+    section.IntroArea > div.IntroText h2{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 70px; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
+    section.IntroArea > div.IntroText h2:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
+    section.IntroArea > div.IntroText h2 > span{animation: text_reveal_box 1s ease; animation-delay: .5s; background-color: #dc143c; position: absolute; top: 0; left: 0; height: 100%; width: 0;}
+    section.IntroArea > div.IntroText h2:last-of-type{color: transparent; font-size: 30px;}
+    section.IntroArea > div.IntroText > a{position: relative; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #dc143c; width: 135px; height: 40px; background: transparent; color: #fff;}
+    section.IntroArea > div.IntroText > a::after{content: ''; display: block; height: 100%; background-color: #dc143c; position: absolute; left: 0; top: 0; width: 0%; z-index: -1; overflow: hidden; transition-property: width; transition-duration: 0.5s;}
+    section.IntroArea > div.IntroText > a:hover::after{width: 100%;}
+    section.IntroArea > div.ScrollDown{ transform: rotate(-90deg); position: absolute; bottom: 50px; left: 25px;}
+    section.IntroArea > div.ScrollDown > span{position: relative; padding-left: 20px; display: block; font-size: 13px; color: white; animation: text_move 1s ease; animation-iteration-count: infinite;}
+    section.IntroArea > div.ScrollDown > span::before{transform: rotate(90deg);  position: absolute; left: 0; bottom: 0; display: block; content: ''; background: url('../img/under-arrow.png') no-repeat center center; width: 17px; height: 10px; }
+    @keyframes text_reveal_box{
+        50%{width : 100%; left: 0;}
+        100% {width: 0; left: 100%;}
+    }
+    @keyframes text_reveal{
+      100%{color: white;}
+    }
+    @keyframes text_reveal_name{
+      100%{color: #08FDD8;}
+    }
+    @keyframes text_move{
+      50% {transform: translateX(-15px);}
+      100% {transform: translateX(0);}
+    }
+    /* intro fin */
+
+    /* About str */
+    /* AboutBlack str */
+    section.AboutArea{height: 100vh; position: relative;}
+    section.AboutArea div.BlackBackground{color: white;}
+    section.AboutArea div.AboutmeBox2,
+    section.AboutArea div.AboutmeBox{padding-top: 115px;}
+    section.AboutArea div.AboutmeBox::after{content: ''; visibility: hidden; clear: both; display: block;}
+    section.AboutArea div.AboutmeBox h2{font-size: 40px; font-weight: 500;}
+    section.AboutArea div.AboutmeBox p{float: left; margin: 300px 0 0 160px; font-size: 25px; line-height: 48px;}
+    section.AboutArea div.AboutmeBox div.AboutLeft{ float: left; width: 440px; height: 670px; position: relative; background: linear-gradient(45deg, #ff00f6 ,#002aff , #8400ff, #ff00f6, #002aff, #8400ff); background-size: 400%; animation: Neon2 10s linear infinite;}
+    section.AboutArea div.AboutmeBox div.AboutLeft::after{ content: ''; position: absolute; left: 5px; top: 5px; right:5px; bottom: 5px; background-color: #222222;}
+    section.AboutArea div.AboutmeBox div.AboutLeft::before{content: ''; position: absolute; left: 5px; top: 5px; right:5px; bottom: 5px; filter: blur(30px); background: linear-gradient(45deg, #002aff ,#8400ff , #ff00f6, #002aff, #8400ff, #ff00f6); background-size: 400%; animation: Neon2 10s linear infinite;}
+    section.AboutArea div.AboutmeBox div.AboutLeft > h2{ position: relative; z-index: 1; padding: 35px 0 590px 45px; font-weight: 500;}
+    section.AboutArea div.AboutmeBox div.AboutLeft > img{ z-index: 1; display: block; width: 100%; max-width: 255px; position: absolute; right: -120px; bottom: 104px;}
+    @keyframes Neon2{
+        0%,100%{background-position: 0;}
+        50%{background-position: 300%;}
+    }
+    section.AboutArea div.Diagonal{z-index: 10; transition-duration: 1s; clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); width: 30%; height: 100vh;  position: absolute; right: 0; bottom: 0;background-color: lightsalmon; filter: hue-rotate(90deg); animation: Neon 2s infinite;}
+    @keyframes Neon{
+        0%{filter: hue-rotate(0deg);}
+        100%{filter: hue-rotate(360deg);}
+    }
+    section.AboutArea div.Check.active{transition-duration: 1s;clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);width: 100%;height: 100vh;}
+    section.AboutArea div.Click::after{content: ''; display: block; clear: both; visibility: hidden;}
+    section.AboutArea div.Click{color: black; position: absolute; right: 40px; bottom: 50px; z-index: 11; cursor: pointer; font-weight: 500;}
+    section.AboutArea div.Click span{float: left; font-size: 35px;}
+    section.AboutArea div.Click:hover{transform: scale(1.2);}
+    /* AboutBlack fin */
+
+
+    /* AboutWhite str */
+    section.AboutArea div.whiteBackground{z-index: 11; color: black; width: 100%; height: 100vh; background-color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2{ float: left; border: 5px solid black; width: 430px; position: relative;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2 > h2{padding: 30px 0 590px 40px;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2 > img{display: block; width: 100%; max-width: 255px; position: absolute; right: -125px; bottom: 100px;}
+    section.AboutArea div.AboutmeFull{width: 100%; height: 100vh; position: absolute;  left: 0; bottom: 0;} 
+    section.AboutArea div.ClickCheck2 span{color: white;}
+    section.AboutArea div.Diagonal2{transition-duration: 1s; clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); width: 30%; height: 100vh;  position: absolute; right: 0; bottom: 0;background-color: black;}
+    /* AboutWhite fin */
+
+    /* AboutDetail str */
+    div.Opacity{opacity: 0; z-index: -1; transition-property: opacity, z-index; width: 100%;}
+    div.DetailFUll{animation: Neon 3s infinite; position: absolute; left: 0; bottom: 0px; height: 100vh;background: linear-gradient(153.5deg ,#222222 50%, #ffa143 50%);}
+    div.FullBox{padding-bottom: 40px; position: absolute; left: calc(50% - 515px); top: calc(50% - 342px); max-width: 1030px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px white;}
+    div.Opacity.active{opacity: 1; z-index: 100; transition-duration: 1s;transition-delay: 1s;}
+    div.FullBox h3{font-size: 40px; text-align: center; padding: 40px 0 60px 0; font-weight: 500;}
+    div.FullBox::after{content: ''; visibility: hidden; display: block; clear: both;}
+    div.FullBox img{float: left; display: block; width: 100%; max-width: 250px; margin-left: 70px;}
+    div.TextBox{float: left; margin-left: 110px;}
+    div.TextBox span:first-of-type{font-size: 35px; display: inline-block; margin-bottom: 30px; font-weight: 700;}
+    div.TextBox span:last-of-type{font-size: 30px; display: inline-block; margin-left: 70px;}
+    div.TextBox ul li{line-height: 30px; font-size: 17px;}
+    div.TextBox h4,
+    div.TextBox ul li strong{font-size: 20px; font-weight: 700;}
+    div.TextBox ul.DetailFirst li.DetailliOne{padding-bottom: 20px; border-bottom: 1px solid black; margin-bottom: 20px;}
+    div.TextBox ul.DetailFirst li.DetailliThree,
+    div.TextBox ul.DetailFirst li.DetailliTwo{float: left;}
+    div.TextBox ul.DetailFirst li.DetailliThree{margin-left: 30px;}
+    /* AboutDetail fin */
+    /* About fin */
+
+
+    /* Skill str */
+    /* skillblack str */
+    section.SkillArea{height: 100vh;  position: relative;}
+    section.SkillArea div.BlackBackground{background: url('../img/SKILL01.png')no-repeat center bottom;background-size: cover; height: 100vh; width: 100%; min-height: 740px;  color: white;}
+    section.SkillArea div::after{content: ''; display: block; clear: both; visibility: hidden;}
+    section.SkillArea div.LeftBox,
+    section.SkillArea div.RightBox{float: left; width: 50%;}
+    section.SkillArea h2{font-size: 40px; font-weight: 500; padding: 80px 0;}
+    section.SkillArea p{font-size: 20px; line-height: 30px; margin-bottom: 25px;}
+    section.SkillArea figure{margin-bottom: 120px;}
+    section.SkillArea figure img{width: 100%; max-width: 60px; display: block; float: left;}
+    section.SkillArea figure figcaption::after{content: ''; display: block; clear: both; visibility: hidden;}
+    section.SkillArea figure figcaption div.Bar{position: relative; width: 420px; height: 10px; background-color: #858685;margin-left: 20px; float: left;}
+    section.SkillArea figure figcaption div.Bar2{position: absolute; left: 0; top: 0; width: 0%;  height: 10px; background-color: #8400ff; box-shadow: 0 0 20px #8400ff,0 0 30px #8400ff;}
+    section.SkillArea div.SkillBlack div figure figcaption div{transition-duration: 1s;}
+    section.SkillArea div.SkillBlack div figure figcaption div.gauge.active{width: 85%;}
+    section.SkillArea div.SkillBlack div figure figcaption div.gauge2.active{width: 85%;}
+    section.SkillArea div.SkillBlack div figure figcaption div.gauge3.active{width: 30%;}
+    section.SkillArea div.SkillBlack div figure figcaption div.gauge4.active{width: 80%;}
+    section.SkillArea div.SkillBlack div figure figcaption div.gauge5.active{width: 70%;}
+    section.SkillArea figure figcaption span{font-size: 17px; margin-left: 20px;}
+    section.SkillArea figure figcaption p{font-size: 17px; margin-left: 20px; display: block;float: left; line-height: 25px;}
+    /* skillblack fin */
+
+
+    /* skillwhite str */
+    section.SkillArea div.WhiteBackground{ height: 100vh; width: 100%;  color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
+    section.SkillArea div.WhiteBackground > div{background: url('../img/SKILL01.png')no-repeat center bottom; background-size: cover; width: 100%; height: 100vh; min-height: 740px; position: absolute;  left: 0; bottom: 0;}
+    section.SkillArea div.SkillWhite div figure figcaption div.WhiteBar2{height: 10px; background-color: white;}
+    section.SkillArea div.SkillWhite div figure figcaption div.gauge{width: 85%;}
+    section.SkillArea div.SkillWhite div figure figcaption div.gauge2{width: 85%;}
+    section.SkillArea div.SkillWhite div figure figcaption div.gauge3{width: 30%;}
+    section.SkillArea div.SkillWhite div figure figcaption div.gauge4{width: 80%;}
+    section.SkillArea div.SkillWhite div figure figcaption div.gauge5{width: 70%;}
+    /* skillwhite fin */
+    /* skill fin */
+    
+
+    /* PORTFOLIO str */
+    /* PORTFOLIOBlack str */
+    section.PortfolioArea{position: relative;}
+    section.PortfolioArea div.PfBlack{width: 100%; color: white;}
+    section.PortfolioArea h2{font-size: 40px; font-weight: 500; padding: 80px 0;}
+    section.PortfolioArea ul li::after{content: ''; visibility: hidden; display: block; clear: both;}
+    section.PortfolioArea ul li:nth-of-type(2),
+    section.PortfolioArea ul li:first-of-type{padding-bottom: 100px; margin-bottom: 100px; border-bottom: 1px solid white;}
+    section.PortfolioArea ul li:last-of-type{padding-bottom: 70px;}
+    section.PortfolioArea ul li > span{ font-size: 80px; float: left;}
+    section.PortfolioArea ul li div.FirstDiv{float: left; margin-left: 70px;}
+    section.PortfolioArea ul li div span{font-size: 30px; margin-bottom: 20px; display: block;}
+    section.PortfolioArea ul li div h3{font-size: 40px; font-weight: 500; margin-bottom: 20px}
+    section.PortfolioArea ul li div p{font-size: 19px;}
+    section.SubPage figure div.RainbowBox,
+    section.PortfolioArea div.PfBlack ul li div.RainbowBox{ box-shadow: 0 0 10px #ff00f6, 0 0 20px #8400ff; border-radius: 10px; float: right; margin-top: 50px; width: 320px; height:75px; position: relative; background: linear-gradient(45deg, #ff00f6 ,#002aff , #8400ff, #ff00f6, #002aff, #8400ff); background-size: 400%; animation: Neon2 10s linear infinite;}
+    section.SubPage figure div.RainbowBox::after,
+    section.PortfolioArea div.PfBlack ul li div.RainbowBox::after{ content: ''; position: absolute; left: 5px; right: 5px; top: 5px; bottom: 5px; background-color: #222222;}
+    section.SubPage figure div.RainbowBox::before,
+    section.PortfolioArea div.PfBlack ul li div.RainbowBox::before{ content: ''; position: absolute; left: 5px; right: 5px; top: 5px; bottom: 5px; background: linear-gradient(45deg, #002aff ,#8400ff , #ff00f6, #002aff, #8400ff, #ff00f6); background-size: 400%; filter: blur(25px); animation: Neon2 10s linear infinite;}
+    section.SubPage figure div.RainbowBox a,
+    section.PortfolioArea div.PfBlack ul li div.RainbowBox a{ text-shadow: 0 0 10px #ff00f6, 0 0 20px #ff00f6; padding-top: 22px; color: #ff00f6; display: block; text-align: center; position: relative; z-index: 1; font-size: 30px; font-weight: 700;}
+    section.PortfolioArea img{opacity: 0; display: block; width: 100%; max-width: 295px;} 
+    section.PortfolioArea div.PfBlack li img.TransX{opacity: 0; transform: translateX(-300px); transition-duration: 1s; transition-property:opacity,transform ;}
+    section.PortfolioArea div.PfBlack li img.TransImg.active{opacity: 1; transform: translateX(300px); transition-duration: 1s;}
+    section.PortfolioArea div.PfBlack li img.TransImg3.active,
+    section.PortfolioArea div.PfBlack li img.TransImg2.active{opacity: 1; transform: translateX(210px); transition-duration: 1s;}
+    /* PORTFOLIOBlack fin */
+
+
+    /* PORTFOLIOWhite str */
+    section.PortfolioArea div.PfWhite{z-index: 11; background-color: white; width: 100%; position: absolute; left: 0; bottom: 0; overflow: hidden;}
+    section.PortfolioArea div.PfFull{width: 100%; position: absolute; left: 0; bottom: 0;}
+    section.PortfolioArea div.PfWhite ul li:nth-of-type(2),
+    section.PortfolioArea div.PfWhite ul li:first-of-type{padding-bottom: 100px; margin-bottom: 100px; border-bottom: 1px solid black;}
+    section.PortfolioArea div.PfWhite ul li > span{color: #585858;}
+    section.PortfolioArea div.PfWhite ul li a{float: right; text-align: center; font-size: 30px; border-radius: 10px; font-weight: 700; width: 310px; height: 65px; line-height: 65px; border: 5px solid #0000ff; color: #0000ff; margin-top: 50px; }
+    /* PORTFOLIOWhite fin */
+    /* PORTFOLIO fin */
+
+
+     /* sub DetailLUS str */
+    section.SubPage{color: white; position: relative;}
+    section.SubPage h2{font-size: 50px; font-weight: 700; padding-top: 120px;}
+    section.SubPage figure{display: flex; flex-direction: row-reverse; align-items: flex-end; margin-bottom: 110px;}
+    section.SubPage figure img{display: block; width: 100%; max-width: 683px; margin-left: 150px;} 
+    section.SubPage figure figcaption ul{margin-bottom: 60px;}
+    section.SubPage figure figcaption ul li:first-of-type strong{font-size: 80px; margin-bottom: 25px;}
+    section.SubPage figure figcaption ul li{ margin-bottom: 20px; font-size: 20px; text-align: right;}
+    section.SubPage figure figcaption ul li strong{font-size: 25px;}
+    section.SubPage div h3{ font-size: 30px; margin-bottom: 40px; font-weight: 700;}
+    section.SubPage div > img:first-of-type{display: block; width: 100%; max-width: 620px; margin-bottom: 20px;}
+    section.SubPage div ul,
+    section.SubPage div div.ImgText{margin-bottom: 40px;}
+    section.SubPage div div.ImgText span{font-size: 17px; display: inline-block;}
+    section.SubPage div div.ImgText span:not(:first-of-type){margin-left: 40px;}
+    section.SubPage div > p{font-size: 17px; line-height: 26px; margin-bottom: 60px; max-width: 50%;}
+    section.SubPage div h4{ font-size: 25px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid white;}
+    section.SubPage div ul.LastUl li{ font-size: 20px; font-weight: 500;}
+    section.SubPage div ul.FirstUl li,
+    section.SubPage div ul.LastUl li:not(:last-of-type){margin-bottom: 20px;}
+    section.SubPage div ul.LastUl::after{content: ''; visibility: hidden; display: block; clear: both;}
+    section.SubPage div ul.LastUl li div.Color{display: block; padding: 25px 0; text-indent: -9999px; margin-bottom: 15px;}
+    section.SubPage div ul.LastUl li div.MainColor{width: 310px; background-color: #ffffff; }
+    section.SubPage div ul.LastUl li div.SubColor1{width: 145px; background-color: #aba8a8; }
+    section.SubPage div ul.LastUl li div.SubColor2{width: 145px; background-color: #000000; }
+    section.SubPage div ul.LastUl li span{font-size: 15px; line-height: 20px;}
+    section.SubPage div ul.LastUl li{float: left;}
+    /* sub DetailLUS fin */
+
+
+    /* sub DetailLOV str */
+    section.LouisvuittonDetail div ul.LastUl li div.MainColor{background-color: #eee; }
+    section.LouisvuittonDetail div ul.LastUl li div.SubColor1{background-color: #cc2915; }
+    section.LouisvuittonDetail div ul.LastUl li div.SubColor2{background-color: #19120c; }
+    /* sub DetailLOV fin */
+
+
+    /* sub DetailPAC str */
+    section.ParadiseDetail div ul.LastUl li div.MainColor{background-color: #977e5c;}
+    section.ParadiseDetail div ul.LastUl li div.SubColor1{background-color: #d0b79c; }
+    section.ParadiseDetail div ul.LastUl li div.SubColor2{background-color: #21201e; }
+    /* sub DetailPAC fin */
+
+
+
+
+
+
+
