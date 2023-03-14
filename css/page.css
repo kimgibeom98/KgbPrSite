@@ -1,5 +1,5 @@
     /* intro str */
-    section.IntroArea{display: flex; position: relative; width: calc(100% - 100px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
+    section.IntroArea{display: flex; position: relative; width: calc(100% - 80px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
     section.IntroArea > div.IntroText{ width: calc(100% - 250px); margin: 0 auto;}
     section.IntroArea > div.IntroText h2{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 70px; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
     section.IntroArea > div.IntroText h2:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
@@ -91,43 +91,10 @@
 
 
     /* Skill str */
-    /* skillblack str */
-    section.SkillArea{height: 100vh;  position: relative;}
-    section.SkillArea div.BlackBackground{background: url('../img/SKILL01.png')no-repeat center bottom;background-size: cover; height: 100vh; width: 100%; min-height: 740px;  color: white;}
-    section.SkillArea div::after{content: ''; display: block; clear: both; visibility: hidden;}
-    section.SkillArea div.LeftBox,
-    section.SkillArea div.RightBox{float: left; width: 50%;}
-    section.SkillArea h2{font-size: 40px; font-weight: 500; padding: 80px 0;}
-    section.SkillArea p{font-size: 20px; line-height: 30px; margin-bottom: 25px;}
-    section.SkillArea figure{margin-bottom: 120px;}
-    section.SkillArea figure img{width: 100%; max-width: 60px; display: block; float: left;}
-    section.SkillArea figure figcaption::after{content: ''; display: block; clear: both; visibility: hidden;}
-    section.SkillArea figure figcaption div.Bar{position: relative; width: 420px; height: 10px; background-color: #858685;margin-left: 20px; float: left;}
-    section.SkillArea figure figcaption div.Bar2{position: absolute; left: 0; top: 0; width: 0%;  height: 10px; background-color: #8400ff; box-shadow: 0 0 20px #8400ff,0 0 30px #8400ff;}
-    section.SkillArea div.SkillBlack div figure figcaption div{transition-duration: 1s;}
-    section.SkillArea div.SkillBlack div figure figcaption div.gauge.active{width: 85%;}
-    section.SkillArea div.SkillBlack div figure figcaption div.gauge2.active{width: 85%;}
-    section.SkillArea div.SkillBlack div figure figcaption div.gauge3.active{width: 30%;}
-    section.SkillArea div.SkillBlack div figure figcaption div.gauge4.active{width: 80%;}
-    section.SkillArea div.SkillBlack div figure figcaption div.gauge5.active{width: 70%;}
-    section.SkillArea figure figcaption span{font-size: 17px; margin-left: 20px;}
-    section.SkillArea figure figcaption p{font-size: 17px; margin-left: 20px; display: block;float: left; line-height: 25px;}
-    /* skillblack fin */
-
-
-    /* skillwhite str */
-    section.SkillArea div.WhiteBackground{ height: 100vh; width: 100%;  color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
-    section.SkillArea div.WhiteBackground > div{background: url('../img/SKILL01.png')no-repeat center bottom; background-size: cover; width: 100%; height: 100vh; min-height: 740px; position: absolute;  left: 0; bottom: 0;}
-    section.SkillArea div.SkillWhite div figure figcaption div.WhiteBar2{height: 10px; background-color: white;}
-    section.SkillArea div.SkillWhite div figure figcaption div.gauge{width: 85%;}
-    section.SkillArea div.SkillWhite div figure figcaption div.gauge2{width: 85%;}
-    section.SkillArea div.SkillWhite div figure figcaption div.gauge3{width: 30%;}
-    section.SkillArea div.SkillWhite div figure figcaption div.gauge4{width: 80%;}
-    section.SkillArea div.SkillWhite div figure figcaption div.gauge5{width: 70%;}
-    /* skillwhite fin */
+    section.SkillArea{height: 100vh;  position: relative; min-height: 740px;}
     /* skill fin */
     
-
+    
     /* PORTFOLIO str */
     /* PORTFOLIOBlack str */
     section.PortfolioArea{position: relative;}
