@@ -109,6 +109,7 @@ section.LouisvuittonDetail div h4,
 section.LouisvuittonDetail div h3,
 section.LouisvuittonDetail h2,
 section.LussosoDetail div h4,
+section.SkillArea div.SkillContent > div:last-of-type h3,
 section.LussosoDetail div h3,
 section.LussosoDetail h2,
 section.PortfolioArea div ul li div h3,
@@ -127,7 +128,7 @@ li{list-style: none;}
 a{text-decoration: none;}
 body{background-color: #1d1d1d;}
 .Shadow{text-shadow: 0 0 10px white, 0 0 20px white;}
-.BackgroundText{position: absolute; font-size: 150px; color: white; opacity: 0.1; z-index: -1; font-size: 250px; font-weight: 700; bottom: 0; right: 0;}
+.BackgroundText{position: absolute; font-size: 150px; color: white; opacity: 0.1; z-index: -1; font-size: 250px; font-weight: 700; bottom: 0; right: 0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
 section.SubPage,
 section.PortfolioArea div.PfWhite div.PfFull > div,
 section.PortfolioArea div.PfBlack,

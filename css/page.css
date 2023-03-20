@@ -1,6 +1,6 @@
     /* intro str */
     section.IntroArea{display: flex; position: relative; width: calc(100% - 80px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
-    section.IntroArea > div.IntroText{ width: calc(100% - 250px); margin: 0 auto;}
+    section.IntroArea > div.IntroText{ width: calc(100% - 40px); max-width: 1574px; margin: 0 auto;}
     section.IntroArea > div.IntroText h2{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 70px; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
     section.IntroArea > div.IntroText h2:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
     section.IntroArea > div.IntroText h2 > span{animation: text_reveal_box 1s ease; animation-delay: .5s; background-color: #dc143c; position: absolute; top: 0; left: 0; height: 100%; width: 0;}
@@ -34,12 +34,10 @@
     section.AboutArea div.AboutmeBox2,
     section.AboutArea div.AboutmeBox{padding-top: 115px;}
     section.AboutArea div.AboutmeBox::after{content: ''; visibility: hidden; clear: both; display: block;}
-    section.AboutArea div.AboutmeBox h2{font-size: 40px; font-weight: 500;}
     section.AboutArea div.AboutmeBox p{float: left; margin: 300px 0 0 160px; font-size: 25px; line-height: 48px;}
     section.AboutArea div.AboutmeBox div.AboutLeft{ float: left; width: 440px; height: 670px; position: relative; background: linear-gradient(45deg, #ff00f6 ,#002aff , #8400ff, #ff00f6, #002aff, #8400ff); background-size: 400%; animation: Neon2 10s linear infinite;}
     section.AboutArea div.AboutmeBox div.AboutLeft::after{ content: ''; position: absolute; left: 5px; top: 5px; right:5px; bottom: 5px; background-color: #222222;}
     section.AboutArea div.AboutmeBox div.AboutLeft::before{content: ''; position: absolute; left: 5px; top: 5px; right:5px; bottom: 5px; filter: blur(30px); background: linear-gradient(45deg, #002aff ,#8400ff , #ff00f6, #002aff, #8400ff, #ff00f6); background-size: 400%; animation: Neon2 10s linear infinite;}
-    section.AboutArea div.AboutmeBox div.AboutLeft > h2{ position: relative; z-index: 1; padding: 35px 0 590px 45px; font-weight: 500;}
     section.AboutArea div.AboutmeBox div.AboutLeft > img{ z-index: 1; display: block; width: 100%; max-width: 255px; position: absolute; right: -120px; bottom: 104px;}
     @keyframes Neon2{
         0%,100%{background-position: 0;}
@@ -55,13 +53,14 @@
     section.AboutArea div.Click{color: black; position: absolute; right: 40px; bottom: 50px; z-index: 11; cursor: pointer; font-weight: 500;}
     section.AboutArea div.Click span{float: left; font-size: 35px;}
     section.AboutArea div.Click:hover{transform: scale(1.2);}
+    .TopText{bottom: calc(100% - 250px); left: 105px; z-index: 9;}
     /* AboutBlack fin */
 
 
     /* AboutWhite str */
     section.AboutArea div.whiteBackground{z-index: 11; color: black; width: 100%; height: 100vh; background-color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
     section.AboutArea div.AboutmeBox div.AboutLeft2{ float: left; border: 5px solid black; width: 430px; position: relative;}
-    section.AboutArea div.AboutmeBox div.AboutLeft2 > h2{padding: 30px 0 590px 40px;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2 > h2{font-size: 40px; font-weight: 500; padding: 30px 0 590px 40px;}
     section.AboutArea div.AboutmeBox div.AboutLeft2 > img{display: block; width: 100%; max-width: 255px; position: absolute; right: -125px; bottom: 100px;}
     section.AboutArea div.AboutmeFull{width: 100%; height: 100vh; position: absolute;  left: 0; bottom: 0;} 
     section.AboutArea div.ClickCheck2 span{color: white;}
@@ -91,7 +90,23 @@
 
 
     /* Skill str */
-    section.SkillArea{height: 100vh;  position: relative; min-height: 740px;}
+    section.SkillArea{height: 100vh; width: calc(100% - 80px); margin-left: auto;  position: relative; min-height: 740px;}
+    section.SkillArea div.SkillContent{height: 80vh; align-items: center; display: flex; width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; }
+    section.SkillArea div.SkillContent > div{width: 50%;}
+    section.SkillArea div.SkillContent > div:first-of-type > h2{font-size: 70px; color: #08FDD8; margin-bottom: 30px;}
+    section.SkillArea div.SkillContent > div:first-of-type > p{font-size: 20px; margin-bottom: 50px; color: white; line-height: 1.5;}
+    section.SkillArea div.SkillContent > div:first-of-type > div{ padding: 30px; max-width: 560px; box-sizing: border-box; background-color: #2a2a2a; }
+    section.SkillArea div.SkillContent > div:first-of-type > div > strong{display: block; color: white; font-size: 25px; margin-bottom: 20px;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > span{display: block; font-size: 17px; color: #ababab; margin-bottom: 20px;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > p{font-size: 17px; margin-bottom: 20px; line-height: 1.3; color: #ababab;}
+    
+    section.SkillArea div.SkillContent > div:first-of-type > div > a{position: relative; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #dc143c; z-index: 9; width: 125px; height: 40px; background: transparent; color: #fff;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > a::after{content: ''; display: block; height: 100%; background-color: #dc143c; position: absolute; left: 0; top: 0; width: 0%; z-index: -1;  overflow: hidden; transition-property: width; transition-duration: 0.5s;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > a:hover::after{width: 100%;}
+    section.SkillArea div.SkillContent > div:last-of-type h3{color: white; margin-bottom: 30px; font-size: 40px; font-weight: 700; text-align: center;}
+    section.SkillArea div.SkillContent > div:last-of-type ul{display: flex; justify-content: space-evenly;}
+    section.SkillArea div.SkillContent > div:last-of-type > div:first-of-type{margin-bottom: 75px; padding-bottom: 75px; border-bottom: 1px solid white;}
+    section.SkillArea div.SkillContent > div:last-of-type ul li img{display: block; max-width: 80px; margin: 0 auto;}
     /* skill fin */
     
     
