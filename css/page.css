@@ -1,10 +1,10 @@
     /* intro str */
     section.IntroArea{display: flex; position: relative; width: calc(100% - 80px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
     section.IntroArea > div.IntroText{ width: calc(100% - 40px); max-width: 1574px; margin: 0 auto;}
-    section.IntroArea > div.IntroText h2{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 70px; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
+    section.IntroArea > div.IntroText h2{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 80px; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
     section.IntroArea > div.IntroText h2:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
     section.IntroArea > div.IntroText h2 > span{animation: text_reveal_box 1s ease; animation-delay: .5s; background-color: #dc143c; position: absolute; top: 0; left: 0; height: 100%; width: 0;}
-    section.IntroArea > div.IntroText h2:last-of-type{color: transparent; font-size: 30px;}
+    section.IntroArea > div.IntroText h2:last-of-type{color: transparent; font-size: 25px;}
     section.IntroArea > div.IntroText > a{position: relative; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #dc143c; width: 135px; height: 40px; background: transparent; color: #fff;}
     section.IntroArea > div.IntroText > a::after{content: ''; display: block; height: 100%; background-color: #dc143c; position: absolute; left: 0; top: 0; width: 0%; z-index: -1; overflow: hidden; transition-property: width; transition-duration: 0.5s;}
     section.IntroArea > div.IntroText > a:hover::after{width: 100%;}
@@ -112,31 +112,12 @@
     
     /* PORTFOLIO str */
     /* PORTFOLIOBlack str */
-    section.PortfolioArea{position: relative;}
+    section.PortfolioArea{position: relative; width: calc(100% - 80px); margin-left: auto}
     section.PortfolioArea div.PfBlack{width: 100%; color: white;}
     section.PortfolioArea h2{font-size: 40px; font-weight: 500; padding: 80px 0;}
-    section.PortfolioArea ul li::after{content: ''; visibility: hidden; display: block; clear: both;}
-    section.PortfolioArea ul li:nth-of-type(2),
-    section.PortfolioArea ul li:first-of-type{padding-bottom: 100px; margin-bottom: 100px; border-bottom: 1px solid white;}
-    section.PortfolioArea ul li:last-of-type{padding-bottom: 70px;}
-    section.PortfolioArea ul li > span{ font-size: 80px; float: left;}
-    section.PortfolioArea ul li div.FirstDiv{float: left; margin-left: 70px;}
-    section.PortfolioArea ul li div span{font-size: 30px; margin-bottom: 20px; display: block;}
-    section.PortfolioArea ul li div h3{font-size: 40px; font-weight: 500; margin-bottom: 20px}
-    section.PortfolioArea ul li div p{font-size: 19px;}
-    section.SubPage figure div.RainbowBox,
-    section.PortfolioArea div.PfBlack ul li div.RainbowBox{ box-shadow: 0 0 10px #ff00f6, 0 0 20px #8400ff; border-radius: 10px; float: right; margin-top: 50px; width: 320px; height:75px; position: relative; background: linear-gradient(45deg, #ff00f6 ,#002aff , #8400ff, #ff00f6, #002aff, #8400ff); background-size: 400%; animation: Neon2 10s linear infinite;}
-    section.SubPage figure div.RainbowBox::after,
-    section.PortfolioArea div.PfBlack ul li div.RainbowBox::after{ content: ''; position: absolute; left: 5px; right: 5px; top: 5px; bottom: 5px; background-color: #222222;}
-    section.SubPage figure div.RainbowBox::before,
-    section.PortfolioArea div.PfBlack ul li div.RainbowBox::before{ content: ''; position: absolute; left: 5px; right: 5px; top: 5px; bottom: 5px; background: linear-gradient(45deg, #002aff ,#8400ff , #ff00f6, #002aff, #8400ff, #ff00f6); background-size: 400%; filter: blur(25px); animation: Neon2 10s linear infinite;}
-    section.SubPage figure div.RainbowBox a,
-    section.PortfolioArea div.PfBlack ul li div.RainbowBox a{ text-shadow: 0 0 10px #ff00f6, 0 0 20px #ff00f6; padding-top: 22px; color: #ff00f6; display: block; text-align: center; position: relative; z-index: 1; font-size: 30px; font-weight: 700;}
-    section.PortfolioArea img{opacity: 0; display: block; width: 100%; max-width: 295px;} 
-    section.PortfolioArea div.PfBlack li img.TransX{opacity: 0; transform: translateX(-300px); transition-duration: 1s; transition-property:opacity,transform ;}
-    section.PortfolioArea div.PfBlack li img.TransImg.active{opacity: 1; transform: translateX(300px); transition-duration: 1s;}
-    section.PortfolioArea div.PfBlack li img.TransImg3.active,
-    section.PortfolioArea div.PfBlack li img.TransImg2.active{opacity: 1; transform: translateX(210px); transition-duration: 1s;}
+    section.PortfolioArea ul.PfList{display: flex;}
+    section.PortfolioArea ul.PfList > li{width: 33.33%; background: rgba(0, 0, 0, 0.3);}
+    section.PortfolioArea ul.PfList > li img{width: 100%; display: block;}
     /* PORTFOLIOBlack fin */
 
 
