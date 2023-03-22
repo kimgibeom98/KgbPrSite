@@ -17,7 +17,7 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+    font-size:14px;
     vertical-align:baseline;
     background:transparent;
 }
@@ -128,7 +128,8 @@ li{list-style: none;}
 a{text-decoration: none;}
 body{background-color: #1d1d1d;}
 .Shadow{text-shadow: 0 0 10px white, 0 0 20px white;}
-.BackgroundText{position: absolute; font-size: 150px; color: white; opacity: 0.1; z-index: -1; font-size: 250px; font-weight: 700; bottom: 0; right: 0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
+.BackgroundText{position: absolute; opacity: 0.1; z-index: -1; bottom: 0; right: 0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
+.BackgroundText > span{color: white; font-size: 18rem; font-weight: 700;}
 section.SubPage,
 section.SkillArea div.SkillWhite,
 section.SkillArea div.SkillBlack,
