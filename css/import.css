@@ -26,15 +26,22 @@
 }
 
 @font-face {
-    font-family: 'Nanum Gothic';
+    font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    src: url('/font/NanumGothic-Regular.woff')
+    src: url('/font/NotoSansKR-Regular.woff')
 }
 
 @font-face {
-    font-family: 'Nanum Gothic';
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/font/NotoSansKR-Medium.woff')
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 700;
-    src: url('/font/NanumGothic-Bold.woff')
+    src: url('/font/NotoSansKR-Bold.woff')
 }

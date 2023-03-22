@@ -99,7 +99,7 @@ input, select {
 section,
 footer,
 header{
-    font-family: 'Nanum Gothic';
+    font-family: 'Noto Sans KR';
 }
 footer h2,
 header > nav.HeaderMenu ul li a,
@@ -120,6 +120,8 @@ section.AboutArea div.Click span:first-of-type,
 section.AboutArea div.AboutmeBox2 h2,
 section.AboutArea div.AboutmeBox h2,
 section.IntroArea,
+a.GitSite,
+a.DetailBtn,
 header h1{
     font-family: 'Raleway'
 }

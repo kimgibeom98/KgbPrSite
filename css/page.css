@@ -61,7 +61,7 @@
     /* AboutWhite str */
     section.AboutArea div.whiteBackground{z-index: 11; color: black; width: 100%; height: 100vh; background-color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
     section.AboutArea div.AboutmeBox div.AboutLeft2{ float: left; border: 5px solid black; width: 430px; position: relative;}
-    section.AboutArea div.AboutmeBox div.AboutLeft2 > h2{font-size: 40px; font-weight: 500; padding: 30px 0 590px 40px;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2 > h2{font-size: 2.9rem; font-weight: 500; padding: 30px 0 590px 40px;}
     section.AboutArea div.AboutmeBox div.AboutLeft2 > img{display: block; width: 100%; max-width: 255px; position: absolute; right: -125px; bottom: 100px;}
     section.AboutArea div.AboutmeFull{width: 100%; height: 100vh; position: absolute;  left: 0; bottom: 0;} 
     section.AboutArea div.ClickCheck2 span{color: white;}
@@ -94,14 +94,14 @@
     section.SkillArea{height: 100vh; width: calc(100% - 100px); margin-left: auto;  position: relative; min-height: 740px;}
     section.SkillArea div.SkillContent{height: 80vh; align-items: center; display: flex; width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; }
     section.SkillArea div.SkillContent > div{width: 50%;}
-    section.SkillArea div.SkillContent > div:first-of-type > h2{font-size: 70px; color: #08FDD8; margin-bottom: 30px;}
-    section.SkillArea div.SkillContent > div:first-of-type > p{font-size: 20px; margin-bottom: 50px; color: white; line-height: 1.5;}
+    section.SkillArea div.SkillContent > div:first-of-type > h2{font-size: 5rem; color: #08FDD8; margin-bottom: 30px;}
+    section.SkillArea div.SkillContent > div:first-of-type > p{font-size: 1.4rem; margin-bottom: 50px; color: white; line-height: 1.5;}
     section.SkillArea div.SkillContent > div:first-of-type > div{ padding: 30px; max-width: 560px; box-sizing: border-box; background-color: #2a2a2a; }
-    section.SkillArea div.SkillContent > div:first-of-type > div > strong{display: block; color: white; font-size: 25px; margin-bottom: 20px;}
-    section.SkillArea div.SkillContent > div:first-of-type > div > span{display: block; font-size: 17px; color: #ababab; margin-bottom: 20px;}
-    section.SkillArea div.SkillContent > div:first-of-type > div > p{font-size: 17px; margin-bottom: 20px; line-height: 1.3; color: #ababab;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > strong{display: block; color: white; font-size: 1.7rem; margin-bottom: 20px;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > span{display: block; font-size: 1.22rem; color: #ababab; margin-bottom: 20px;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > p{font-size: 1.22rem; margin-bottom: 20px; line-height: 1.3; color: #ababab;}
     
-    section.SkillArea div.SkillContent > div:first-of-type > div > a{position: relative; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #dc143c; z-index: 9; width: 125px; height: 40px; background: transparent; color: #fff;}
+    section.SkillArea div.SkillContent > div:first-of-type > div > a{position: relative; display: flex; font-size: 1.2rem; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #dc143c; z-index: 9; width: 125px; height: 40px; background: transparent; color: #fff;}
     section.SkillArea div.SkillContent > div:first-of-type > div > a::after{content: ''; display: block; height: 100%; background-color: #dc143c; position: absolute; left: 0; top: 0; width: 0%; z-index: -1;  overflow: hidden; transition-property: width; transition-duration: 0.5s;}
     section.SkillArea div.SkillContent > div:first-of-type > div > a:hover::after{width: 100%;}
     section.SkillArea div.SkillContent > div:last-of-type h3{color: white; margin-bottom: 30px; font-size: 40px; font-weight: 700; text-align: center;}
@@ -121,15 +121,20 @@
     section.PortfolioArea ul.PfList > li{width: 100%; background-color: #1d1d1d; box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12);}
     section.PortfolioArea ul.PfList > li figure > img{width: 100%; display: block; max-width: 523px;}
     section.PortfolioArea ul.PfList > li figure figcaption{padding: 15px; box-sizing: border-box;}
-    section.PortfolioArea ul.PfList > li figure figcaption h3{font-weight: 700; font-size: 25px; margin-bottom: 15px;}
-    section.PortfolioArea ul.PfList > li figure figcaption p{font-size: 17px; color: white; display: block; margin-bottom: 45px;}
+    section.PortfolioArea ul.PfList > li figure figcaption h3{font-weight: 700; font-size: 1.8rem; margin-bottom: 15px;}
+    section.PortfolioArea ul.PfList > li figure figcaption p{font-size: 1.2rem; color: white; display: block; margin-bottom: 45px;}
     section.PortfolioArea ul.PfList > li figure figcaption > ul{display: flex; flex-wrap: wrap; margin-bottom: 20px;}
-    section.PortfolioArea ul.PfList > li figure figcaption > ul > li{font-size: 13px;  margin: 0 6px 10px 6px; width: 85px; height: 25px; background-color: rgba(55, 55, 67, 0.7); display: flex; align-items: center; justify-content: center; border-radius: 5px; }
+    section.PortfolioArea ul.PfList > li figure figcaption > ul > li{margin: 0 6px 10px 6px; width: 85px; height: 30px; background-color: rgba(55, 55, 67, 0.7); display: flex; align-items: center; justify-content: center; border-radius: 5px; }
     section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox{display: flex;}
-    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a{height: 38px;  display: flex; align-items: center; padding: 0 20px;  font-size: 14px; justify-content: center;  color: white;}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a{height: 38px; font-weight: 700; display: flex; align-items: center; padding: 0 20px;  justify-content: center;  color: white;}
     section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a:not(:first-of-type){margin-left: 15px;}
     section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.GoSite{ background-color:  #dc143c;}
-    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.DetailBtn{background-color: rgb(57, 57, 124);}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.GoSite:hover{ background-color:  #d92d50;}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.DetailBtn{background-color: #8400ff;}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.DetailBtn:hover{background-color: #901efb;}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.GitSite{background-color: #fff; position: relative; color: black; padding-left: 45px; padding-right: 15px;}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.GitSite:hover{background: rgb(155, 155, 155);}
+    section.PortfolioArea ul.PfList > li figure figcaption div.BtnBox a.GitSite::before{content: ''; position: absolute; left: 10px; width: 30px; height: 30px; background: url('../img/github2.png') 50% 50% no-repeat; background-size: 22px 22px;}
     /* PORTFOLIOBlack fin */
 
 
