@@ -3,8 +3,8 @@
     header{position: relative;}
     header > div.LeftMenu{display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: fixed; width: 100px; z-index: 9999; height: 100vh; background-color: #181818;}
     header > div.LeftMenu > h1{ width: 100%; height: 125px; flex-direction: column; display: flex; align-items: center; justify-content: center; background-color: black;}
-    header > div.LeftMenu > h1 img{display: block; margin-bottom: 18px;}
-    header > div.LeftMenu > h1 span{display: block; font-size: 0.9rem; color: #a5a5a5;}
+    header > div.LeftMenu > h1 a > img{display: block; margin: 0 auto 18px;}
+    header > div.LeftMenu > h1 a > span{display: block; font-size: 0.9rem; color: #a5a5a5;}
     header > div.LeftMenu > a{margin-bottom: 30px;}
     header > div.LeftMenu > a > img{display: block; width: 100%; max-width: 50px; margin: 0 auto;}
     header > div > .MenuDefault{width: 40px;height: 40px; cursor: pointer; margin: 0 auto;}
@@ -28,22 +28,5 @@
     header > nav.HeaderMenu ul li a.active{color: #8400ff; text-shadow: 0 0 10px #ff00f6;}
     header > nav.HeaderMenu ul li a:hover::after{width: 100%;}
     /* header fin */
-
-
-    /* footer str */
-    footer{ background: url('../img/contact01.png') no-repeat center bottom; background-size: cover; width: 100%; height: 100vh; color: white; position: relative}
-    footer h2{font-size: 40px; font-weight: 500; padding-top: 80px; margin-bottom: 120px;}
-    footer p{font-size: 25px; clear: both; text-align: center;}
-    footer div.ConteactFull{width: 100%; max-width: 560px; margin: 80px auto; display: flex; justify-content: space-between; text-align: center;}
-    div.Border{position: relative; width: 70px; height: 270px; border: 10px solid #8400ff; box-sizing: border-box;}
-    div.Border::after{border: 10px solid #8400ff;filter: blur(10px); width: 100%; height: 100%; content: '';}
-    footer div.LeftBox{border-right: none;}
-    footer div.LeftBox::after{border-right: none; position: absolute; left: -10px; top: -10px; right: 0; bottom: 0;}
-    footer div.RightBox{border-left: none;}
-    footer div.RightBox::after{border-left: none; position: absolute; left: 0; top: -10px; right: -10px; bottom: 0;}
-    footer div.NeonBox > *{display: block; font-size: 25px; padding-bottom: 15px; color: white;}
-    footer div.NeonBox{width: 100%; max-width: 450px; margin: 80px auto;box-sizing: border-box;}
-    /* footer fin */
-
 
 

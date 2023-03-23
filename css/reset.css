@@ -119,6 +119,7 @@ section.SkillArea > div h2,
 section.AboutArea div.Click span:first-of-type,
 section.AboutArea div.AboutmeBox2 h2,
 section.AboutArea div.AboutmeBox h2,
+section.PortfolioArea div.PfBlack h2,
 section.IntroArea,
 a.GitSite,
 a.DetailBtn,
@@ -136,6 +137,6 @@ section.SubPage,
 section.SkillArea div.SkillWhite,
 section.SkillArea div.SkillBlack,
 section.AboutArea div.AboutmeBox,
-footer > div{
+section.ContactArea > div{
     max-width: 1300px; margin: 0 auto; width: 100%;
 }
