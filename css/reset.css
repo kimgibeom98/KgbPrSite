@@ -24,6 +24,7 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    background-color: #1d1d1d;
 }
 
 article,aside,details,figcaption,figure,
@@ -31,7 +32,7 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
-nav ul {
+nav ul, li {
     list-style:none;
 }
 
@@ -51,6 +52,7 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
@@ -97,46 +99,31 @@ input, select {
 }
 
 section,
-footer,
 header{
     font-family: 'Noto Sans KR';
 }
-footer h2,
+
 header > nav.HeaderMenu ul li a,
 div.FullBox h3,
 div.TextBox span:last-of-type,
-section.LouisvuittonDetail div h4,
-section.LouisvuittonDetail div h3,
-section.LouisvuittonDetail h2,
-section.LussosoDetail div h4,
 section.SkillArea div.SkillContent > div:last-of-type h3,
-section.LussosoDetail div h3,
-section.LussosoDetail h2,
 section.PortfolioArea div ul li div h3,
 section.PortfolioArea div ul li div span,
-section.PortfolioArea div h2,
-section.SkillArea > div h2,
 section.AboutArea div.Click span:first-of-type,
-section.AboutArea div.AboutmeBox2 h2,
-section.AboutArea div.AboutmeBox h2,
-section.PortfolioArea div.PfBlack h2,
+section.AboutArea div.AboutmeBox > div > h2,
+section.SkillArea div.SkillContent > div:first-of-type > div > a,
+section.PortfolioArea div.pfIntro > a,
+section.ContactArea p,
 section.IntroArea,
 a.GitSite,
 a.DetailBtn,
+.ContentTitle,
 header h1{
     font-family: 'Raleway'
 }
 
-li{list-style: none;}
-a{text-decoration: none;}
-body{background-color: #1d1d1d;}
+.ContentTitle{font-size: 5rem; font-weight: 700; color: #06ee7a; margin-bottom: 30px;}
 .Shadow{text-shadow: 0 0 10px white, 0 0 20px white;}
-.BackgroundText{position: absolute; opacity: 0.1; z-index: -1; bottom: 0; right: 0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
+.TitleShadow{text-shadow: 0 0 0 #06ee7a, 0 0 10px #06ee7a;}
+.BackgroundText{position: absolute; opacity: 0.03; z-index: -1; bottom: 0; right: 0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
 .BackgroundText > span{color: white; font-size: 18rem; font-weight: 700;}
-section.SubPage,
-section.SkillArea div.SkillWhite,
-section.SkillArea div.SkillBlack,
-section.AboutArea div.AboutmeBox,
-section.ContactArea > div{
-    max-width: 1300px; margin: 0 auto; width: 100%;
-}

@@ -49,21 +49,21 @@ function ScrollEven(Scroll, BOX) {
     }
   })
 
-  // $(window).scroll(function () {
-  //   $('.Bar2').each(function () {
-  //     if ($(window).scrollTop() > $(this).offset().top - ($(window).height() / 1.5)) {
-  //       $(this).addClass('active');
-  //     } else {
-  //       $(this).removeClass('active');
-  //     }
-  //   })
-  // });
+  $(window).scroll(function () {
+    $('.ChildLine').each(function () {
+      if ($(window).scrollTop() > $(this).offset().top - ($(window).height() / 1.5)) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    })
+  });
 
   // $(window).scroll(function () {
-  //   if ($(window).scrollTop() > $('.TransImg').offset().top - ($(window).height() / 2.5)) {
-  //     $('.TransImg').addClass('active');
+  //   if ($(window).scrollTop() > $('.ContourLine').offset().top - ($(window).height() / 2.5)) {
+  //     $('.ContourLine').addClass('active');
   //   } else {
-  //     $('.TransImg').removeClass('active');
+  //     $('.ContourLine').removeClass('active');
   //   }
   // });
 
