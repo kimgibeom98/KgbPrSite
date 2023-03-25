@@ -54,7 +54,7 @@
     section.AboutArea div.Check.active{transition-duration: 1s;clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);width: 100%;height: 100vh;}
     section.AboutArea div.Click::after{content: ''; display: block; clear: both; visibility: hidden;}
     section.AboutArea div.Click{color: black; position: absolute; right: 40px; bottom: 50px; z-index: 11; cursor: pointer; font-weight: 500;}
-    section.AboutArea div.Click span{float: left; font-size: 1.8rem;}
+    section.AboutArea div.Click span{float: left; font-size: 2rem;}
     section.AboutArea div.Click:hover{transform: scale(1.2);}
     .TopText{bottom: calc(100% - 250px); left: 142px; z-index: 10;}
     /* AboutBlack fin */
@@ -94,7 +94,7 @@
 
     /* Skill str */
     section.SkillArea{height: 100vh; width: calc(100% - 100px); margin-left: auto;  position: relative; min-height: 740px;}
-    section.SkillArea div.SkillContent{height: 80vh; align-items: center; display: flex; width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; }
+    section.SkillArea div.SkillContent{align-items: center; display: flex; width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; padding-top: 115px; }
     section.SkillArea div.SkillContent > div{width: 50%;}
     section.SkillArea div.SkillContent > div:first-of-type > p{font-size: 1.4rem; margin-bottom: 50px; color: white; line-height: 1.5;}
     section.SkillArea div.SkillContent > div:first-of-type > div{ padding: 30px; max-width: 560px; box-sizing: border-box; background-color: #2a2a2a; }
@@ -118,7 +118,7 @@
     /* PORTFOLIOBlack str */
     section.PortfolioArea{position: relative; width: calc(100% - 100px); margin-left: auto;}
     section.PortfolioArea div.BackgroundText{left: 22px; z-index: -1;}
-    section.PortfolioArea div.PfBlack{max-width: 1574px;  width: 100%; padding: 150px 0 125px 0; margin: 0 auto; color: white; }
+    section.PortfolioArea div.PfBlack{max-width: 1574px;  width: 100%; padding: 115px 0 125px 0; margin: 0 auto; color: white; }
     section.PortfolioArea div.PfBlack div.pfIntro p > a{text-shadow: 0 0 10px #dc143c, 0 0 20px #dc143c;}
     section.PortfolioArea div.pfIntro{margin-bottom: 50px; display: flex; align-items: end; justify-content: space-between;}
     section.PortfolioArea div.pfIntro p{ font-size: 1.4rem; color: white; line-height: 1.5;}
@@ -157,10 +157,10 @@
 
     
     /* CONTACT str */
-    section.ContactArea{color: white; position: relative; width: calc(100% - 100px); margin-left: auto;}
-    section.ContactArea > div{width: calc(100% - 40px); padding-top: 80px; max-width: 1574px; margin: 0 auto;}
-    section.ContactArea p{font-size: 25px; clear: both; text-align: center;}
-    section.ContactArea div.ConteactFull{width: 100%; max-width: 560px; margin: 80px auto; display: flex; justify-content: space-between; text-align: center;}
+    section.ContactArea{color: white; position: relative; width: calc(100% - 100px); margin-left: auto; padding-bottom: 260px;}
+    section.ContactArea > div{width: calc(100% - 40px); padding-top: 115px; max-width: 1574px; margin: 0 auto;}
+    section.ContactArea > div > P{font-size: 1.4rem; margin-bottom: 70px; color: white; line-height: 1.5;}
+    section.ContactArea div.ConteactFull{width: 100%; max-width: 560px; margin: 0 auto ; display: flex; justify-content: space-between; text-align: center;}
     section.ContactArea div.Border{position: relative; width: 70px; height: 270px; border: 10px solid #8400ff; box-sizing: border-box;}
     section.ContactArea div.Border::after{border: 10px solid #8400ff;filter: blur(10px); width: 100%; height: 100%; content: '';}
     section.ContactArea div.LeftBox{border-right: none;}
