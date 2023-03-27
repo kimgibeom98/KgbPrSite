@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // ClickEven str
   ClickEven(".MenuDefault", ".Menu");
   ClickEven(".Click", ".Check");
@@ -30,10 +31,7 @@ function ClickEven(Click, BOX) {
 
 // ScrollEven str
 function ScrollEven(Scroll, BOX) {
- 
-
   $(window).scroll(function () {
-    console.log(123)
     var divOffsetTop = $(Scroll).offset().top;
     var scrollTop = $(window).scrollTop() + ($(window).height() / 1.5);
     var divH = $(Scroll).height();
@@ -59,28 +57,34 @@ function ScrollEven(Scroll, BOX) {
     })
   });
 
-  // $(window).scroll(function () {
-  //   if ($(window).scrollTop() > $('.ContourLine').offset().top - ($(window).height() / 2.5)) {
-  //     $('.ContourLine').addClass('active');
-  //   } else {
-  //     $('.ContourLine').removeClass('active');
-  //   }
-  // });
-
-  // $(window).scroll(function () {
-  //   if ($(window).scrollTop() > $('.TransImg2').offset().top - ($(window).height() / 2.5)) {
-  //     $('.TransImg2').addClass('active');
-  //   } else {
-  //     $('.TransImg2').removeClass('active');
-  //   }
-  // });
-
-  // $(window).scroll(function () {
-  //   if ($(window).scrollTop() > $('.TransImg3').offset().top - ($(window).height() / 2.5)) {
-  //     $('.TransImg3').addClass('active');
-  //   } else {
-  //     $('.TransImg3').removeClass('active');
-  //   }
-  // });
+  $(window).scroll(function () {
+    $('.light').each(function () {
+      if ($(window).scrollTop() > $(this).offset().top - ($(window).height() / 1.5)) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    })
+  });
 }
     // ScrollEven fin
+
+  const cursor = document.querySelector(".cursor");
+  document.addEventListener("mousemove", (e) => {
+    let x = e.clientX;
+    let y = e.clientY;
+    cursor.style.top = `${y}px`
+    cursor.style.left = `${x}px`
+    cursor.style.display = "block";
+  })
+  document.addEventListener("mouseout", () => {
+    cursor.style.display = "none";
+  })
+
+
+  function openPop(target) {
+    const body = document.querySelector('body');
+    const targetPopup = document.querySelector(`.${target}`);
+    body.style.overflow = "hidden";
+  }
+

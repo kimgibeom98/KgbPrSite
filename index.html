@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KGBPR_PORTFOLIO</title>
-  <link rel="stylesheet" href="css/import.css">
+  <link href="css/import.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="img/favicon.ico">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="JS/Pr.js"></script>
+  <script src="JS/Pr.js" defer></script>
 </head>
 
 <body>
+  <div class="cursor"></div>
   <!-- header str -->
   <header class="MenuActive">
     <div class="LeftMenu">
@@ -79,9 +80,7 @@
       </div>
       <div class="ClickCheck Click">
         <span>click</span>
-        <span class="material-icons">
-          done
-        </span>
+        <img src="img/check.png" alt="체크아이콘">
       </div>
       <div class="Diagonal Check"></div>
     </div>
@@ -98,9 +97,7 @@
         </div>
         <div class="ClickCheck2 Click">
           <span>click</span>
-          <span class="material-icons">
-            done
-          </span>
+          <img src="img/check.png" alt="체크아이콘">
         </div>
         <div class="Diagonal2 Check"></div>
       </div>
@@ -108,9 +105,7 @@
     <div class="DetailFUll Opacity">
       <div class="ClickCheck3 Click">
         <span>click</span>
-        <span class="material-icons">
-          done
-        </span>
+        <img src="img/check.png" alt="체크아이콘">
       </div>
     </div>
     <div class="FullBox Opacity">
@@ -208,6 +203,41 @@
 
   <!-- portfolio str -->
   <section class="PortfolioArea MenuActive" id="PORTFOLIO">
+    <!-- detail pop str -->
+    <div class="DetailPop">
+      <button type="button" class="CloseBtn">팝업닫기</button>
+      <div class="EmotionDetail">
+        <h2>emotion-diary</h2>
+        <ul>
+          <li>
+            <span></span>
+            <p></p>
+          </li>
+          <li>
+            <span></span>
+            <p></p>
+          </li>
+          <li>
+            <span></span>
+            <p></p>
+          </li>
+          <li>
+            <span></span>
+            <p></p>
+          </li>
+          <li>
+            <span></span>
+            <p></p>
+          </li>
+        </ul>
+        <img src="" alt="">
+        <div>
+          <h3>기술 사항</h3>
+
+        </div>
+      </div>
+    </div>
+    <!-- detail pop fin -->
     <div class="PfBlack">
       <div class="pfIntro">
         <div>
@@ -224,7 +254,7 @@
         <ul class="PfList">
           <li>
             <figure>
-              <img src="img/portfolio10.png" alt="행정안전부">
+              <img src="img/portfolio10.png" alt="감정일기장">
               <figcaption>
                 <h3>emotion-diary</h3>
                 <p>React로 제작한 토이프로젝트 감정일기장 입니다.</p>
@@ -234,11 +264,40 @@
                     <li>#Typescript</li>
                     <li>#localstorage</li>
                     <li>#Javascript</li>
+                    <li>#tsx</li>
+                  </ul>
+                  <div class="BtnBox">
+                    <a href="#" class="GoSite">사이트 바로가기</a>
+                    <a href="#" class="DetailBtn" onclick="openPop('EmotionDetail')">Detail</a>
+                    <a href="https://github.com/kimgibeom98/react-emotion-diary" class="GitSite"
+                      target="_blank">GitHub</a>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="img/portfolio11.png" alt="날씨앱">
+              <figcaption>
+                <h3>weather-app</h3>
+                <p>React로 제작한 토이프로젝트 날씨 앱 입니다.</p>
+                <div class="SkillandBtn">
+                  <ul>
+                    <li>#React</li>
+                    <li>#Typescript</li>
+                    <li>#localstorage</li>
+                    <li>#Javascript</li>
+                    <li>#styled-components</li>
+                    <li>#Axios</li>
+                    <li>#tsx</li>
+                    <li>#Moment.js</li>
                   </ul>
                   <div class="BtnBox">
                     <a href="#" class="GoSite">사이트 바로가기</a>
                     <a href="#" class="DetailBtn">Detail</a>
-                    <a href="https://github.com/kimgibeom98/react-emotion-diary" class="GitSite">GitHub</a>
+                    <a href="https://github.com/kimgibeom98/react-weather-app" class="GitSite"
+                      target="_blank">GitHub</a>
                   </div>
                 </div>
               </figcaption>
@@ -249,29 +308,6 @@
               <img src="img/portfolio01.png" alt="행정안전부">
               <figcaption>
                 <h3>행정안전부</h3>
-                <p>퀀텀에듀솔루션 근무 당시 제작한 웹사이트입니다. </p>
-                <div class="SkillandBtn">
-                  <ul>
-                    <li>#HTML</li>
-                    <li>#CSS</li>
-                    <li>#Javascript</li>
-                    <li>#jquery</li>
-                    <li>#swiper</li>
-                    <li>#반응형웹</li>
-                  </ul>
-                  <div class="BtnBox">
-                    <a href="#" class="GoSite">사이트 바로가기</a>
-                    <a href="#" class="DetailBtn">Detail</a>
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/portfolio02.png" alt="포춘잉글리쉬">
-              <figcaption>
-                <h3>포춘잉글리시</h3>
                 <p>퀀텀에듀솔루션 근무 당시 제작한 웹사이트입니다.</p>
                 <div class="SkillandBtn">
                   <ul>
@@ -283,9 +319,7 @@
                     <li>#반응형웹</li>
                   </ul>
                   <div class="BtnBox">
-                    <a href="#" class="GoSite">사이트 바로가기</a>
-                    <a href="#" class="DetailBtn">Detail</a>
-                    <a href="#" class="GitSite">GitHub</a>
+                    <a href="https://www.mois.go.kr/frt/a01/frtMain.do" class="GoSite" target="_blank">사이트 바로가기</a>
                   </div>
                 </div>
               </figcaption>
@@ -308,7 +342,7 @@
           <ul class="PfList">
             <li>
               <figure>
-                <img src="img/portfolio10.png" alt="행정안전부">
+                <img src="img/portfolio10.png" alt="감정일기장">
                 <figcaption>
                   <h3>emotion-diary</h3>
                   <p>React로 제작한 토이프로젝트 감정일기장 입니다.</p>
@@ -318,17 +352,43 @@
                       <li>#Typescript</li>
                       <li>#localstorage</li>
                       <li>#Javascript</li>
+                      <li>#tsx</li>
                     </ul>
                     <div class="BtnBox">
                       <a href="#" class="GoSite">사이트 바로가기</a>
                       <a href="#" class="DetailBtn">Detail</a>
-                      <a href="https://github.com/kimgibeom98/react-emotion-diary" target="_blank" class="GitSite">GitHub</a>
+                      <a href="https://github.com/kimgibeom98/react-emotion-diary" class="GitSite"
+                        target="_blank">GitHub</a>
                     </div>
                   </div>
                 </figcaption>
-
-
-                
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="img/portfolio11.png" alt="날씨앱">
+                <figcaption>
+                  <h3>weather-app</h3>
+                  <p>React로 제작한 토이프로젝트 날씨 앱 입니다.</p>
+                  <div class="SkillandBtn">
+                    <ul>
+                      <li>#React</li>
+                      <li>#Typescript</li>
+                      <li>#localstorage</li>
+                      <li>#Javascript</li>
+                      <li>#styled-components</li>
+                      <li>#Axios</li>
+                      <li>#tsx</li>
+                      <li>#Moment.js</li>
+                    </ul>
+                    <div class="BtnBox">
+                      <a href="#" class="GoSite">사이트 바로가기</a>
+                      <a href="#" class="DetailBtn">Detail</a>
+                      <a href="https://github.com/kimgibeom98/react-weather-app" class="GitSite"
+                        target="_blank">GitHub</a>
+                    </div>
+                  </div>
+                </figcaption>
               </figure>
             </li>
             <li>
@@ -336,29 +396,6 @@
                 <img src="img/portfolio01.png" alt="행정안전부">
                 <figcaption>
                   <h3>행정안전부</h3>
-                  <p>퀀텀에듀솔루션 근무 당시 제작한 웹사이트입니다. </p>
-                  <div class="SkillandBtn">
-                    <ul>
-                      <li>#HTML</li>
-                      <li>#CSS</li>
-                      <li>#Javascript</li>
-                      <li>#jquery</li>
-                      <li>#swiper</li>
-                      <li>#반응형웹</li>
-                    </ul>
-                    <div class="BtnBox">
-                      <a href="#" class="GoSite">사이트 바로가기</a>
-                      <a href="#" class="DetailBtn">Detail</a>
-                    </div>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <figure>
-                <img src="img/portfolio02.png" alt="포춘잉글리쉬">
-                <figcaption>
-                  <h3>포춘잉글리시</h3>
                   <p>퀀텀에듀솔루션 근무 당시 제작한 웹사이트입니다.</p>
                   <div class="SkillandBtn">
                     <ul>
@@ -370,9 +407,7 @@
                       <li>#반응형웹</li>
                     </ul>
                     <div class="BtnBox">
-                      <a href="#" class="GoSite">사이트 바로가기</a>
-                      <a href="#" class="DetailBtn">Detail</a>
-                      <a href="#" class="GitSite">GitHub</a>
+                      <a href="https://www.mois.go.kr/frt/a01/frtMain.do" class="GoSite" target="_blank">사이트 바로가기</a>
                     </div>
                   </div>
                 </figcaption>
@@ -387,6 +422,13 @@
 
   <!-- CONTACT str -->
   <section id="CONTACT" class="ContactArea MenuActive">
+    <div class="light">
+      <div class="wire"></div>
+      <div class="bulb">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <div>
       <div class="BackgroundText">
         <span>CONTACT</span>

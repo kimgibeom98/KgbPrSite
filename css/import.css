@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
-
 @import url('reset.css');
 @import url('global.css');
 @import url('page.css');
@@ -8,40 +6,40 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    src: url('/font/Raleway-Regular.woff')
+    src: url('/font/Raleway-Regular.woff') format('woff')
 }
 
 @font-face {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    src: url('/font/Raleway-Medium.woff')
+    src: url('/font/Raleway-Medium.woff') format('woff')
 }
 
 @font-face {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    src: url('/font/Raleway-Bold.woff')
+    src: url('/font/Raleway-Bold.woff') format('woff')
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    src: url('/font/NotoSansKR-Regular.woff')
+    src: url('/font/NotoSansKR-Regular.woff') format('woff')
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 500;
-    src: url('/font/NotoSansKR-Medium.woff')
+    src: url('/font/NotoSansKR-Medium.woff') format('woff')
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 700;
-    src: url('/font/NotoSansKR-Bold.woff')
+    src: url('/font/NotoSansKR-Bold.woff') format('woff')
 }

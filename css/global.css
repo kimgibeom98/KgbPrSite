@@ -1,13 +1,13 @@
     
     /* header str */
     header{position: relative;}
-    header > div.LeftMenu{display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: fixed; width: 100px; z-index: 9999; height: 100vh; background-color: #181818;}
+    header > div.LeftMenu{display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: fixed; width: 100px; z-index: 999; height: 100vh; background-color: #181818;}
     header > div.LeftMenu > h1{ width: 100%; height: 125px; flex-direction: column; display: flex; align-items: center; justify-content: center; background-color: black;}
     header > div.LeftMenu > h1 a > img{display: block; margin: 0 auto 18px;}
     header > div.LeftMenu > h1 a > span{display: block; font-size: 0.9rem; color: #a5a5a5;}
     header > div.LeftMenu > a{margin-bottom: 30px;}
     header > div.LeftMenu > a > img{display: block; width: 100%; max-width: 50px; margin: 0 auto;}
-    header > div > .MenuDefault{width: 40px;height: 40px; cursor: pointer; margin: 0 auto;}
+    header > div > .MenuDefault{width: 40px;height: 40px; margin: 0 auto;}
     header > div > .MenuDefault span{display: block; height: 2px;background-color: #fff;margin-bottom: 8px;transition-duration: 1s;}
     header > div > .MenuDefault.active span:nth-child(1){transform: translateY(10px) rotate(-45deg);}
     header > div > .MenuDefault.active span:nth-child(2){transform: translateX(50px) rotate(180deg); opacity: 0;}
@@ -28,5 +28,19 @@
     header > nav.HeaderMenu ul li a.active{color: #8400ff; text-shadow: 0 0 10px #ff00f6;}
     header > nav.HeaderMenu ul li a:hover::after{width: 100%;}
     /* header fin */
+
+    /* cursor even str */
+    .cursor{z-index: 9999; position: fixed; background-color: #2696e8; width: 20px; height: 20px; border-radius: 50%; pointer-events: none; box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8; animation: colors 5s infinite; display: none;}
+    .cursor::before{content: ''; position: absolute; background: #2696e8; width: 50px; height: 50px; opacity: 0.2; transform: translate(-30%, -30%); border-radius: 50%;}
+    @keyframes colors {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    /* cursor even fin */
 
 

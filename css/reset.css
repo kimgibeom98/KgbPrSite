@@ -25,6 +25,7 @@ time, mark, audio, video {
 body {
     line-height:1;
     background-color: #1d1d1d;
+    cursor: none;
 }
 
 article,aside,details,figcaption,figure,
@@ -53,6 +54,7 @@ a {
     vertical-align:baseline;
     background:transparent;
     text-decoration: none;
+    cursor: none;
 }
 
 /* change colours to suit your needs */
