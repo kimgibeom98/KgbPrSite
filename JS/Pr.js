@@ -85,6 +85,7 @@ function ScrollEven(Scroll, BOX) {
   function openPop(target) {
     const body = document.querySelector('body');
     const targetPopup = document.querySelector(`.${target}`);
+    console.log(body)
     body.style.overflow = "hidden";
   }
 

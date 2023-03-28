@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KGBPR_PORTFOLIO</title>
-  <link href="css/import.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/import.css">
   <link rel="shortcut icon" href="img/favicon.ico">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="JS/Pr.js" defer></script>
@@ -210,30 +210,98 @@
         <h2>emotion-diary</h2>
         <ul>
           <li>
-            <span></span>
-            <p></p>
+            <span>간단 소개</span>
+            <p>React로 제작한 토이프로젝트 감정일기장 입니다.</p>
           </li>
           <li>
-            <span></span>
-            <p></p>
+            <span>사용 기술</span>
+            <p>React, Typescript, localstorage, Javascript, tsx</p>
           </li>
           <li>
-            <span></span>
-            <p></p>
+            <span>구성원</span>
+            <p>개인프로젝트</p>
           </li>
           <li>
-            <span></span>
-            <p></p>
-          </li>
-          <li>
-            <span></span>
-            <p></p>
+            <span>사이트 바로가기</span>
+            <p><a href="#" target="_blank">emotion-diary</a></p>
           </li>
         </ul>
-        <img src="" alt="">
-        <div>
+        <img class="DetailImg" src="img/detail_emotion.png" alt="">
+        <div class="DetailText">
+          <h3>소개</h3>
+          <p>React 기초 문법 공부를 마친 후 공부한 내용을 활용해서 제작한 첫 React 토이 프로젝트 입니다.<br>
+            처음에는 JSX 문법을 이용하여 기능구현을 하였으나 프로젝트 완성 후 Typescript 공부를 시작하였고 Typescript 기초 문법을 익힌 후 TSX 문법으로 수정하였습니다.</p>
           <h3>기술 사항</h3>
+          <ul>
+            <li>- 일기생성</li>
+            <li>- 일기수정</li>
+            <li>- 일기삭제</li>
+            <li>- 감정에 따른 일기 리스트 정렬</li>
+            <li>- 최신순, 오래된 순 선택하여 일기 리스트 정렬</li>
+            <li>- localStorage를 이용한 일기 저장</li>
+            <li>- 날짜별 일기 저장</li>
+          </ul>
+          <div class="DetailSubtext">
+            <ol>
+              <li>
+                <h4>1. 일기생성</h4>
+                <div>
+                  <p>
+                    일기 생성 시 감정, 날짜, 내용 등을 state로 저장 후 Context API를 이용해 데이터를 전달 한 다음 useReducer를 이용하여 데이터를 localStorage
+                    저장소에 저장합니다.
+                  </p>
+                </div>
+              </li>
 
+
+              <li>
+                <h4>2. 일기수정</h4>
+                <div>
+                  <p>
+                    일기 및 수정 버튼 클릭시 Route path를 통해 고유 ID를 파라미터값으로 전달합니다. 전달받은 ID 파라미터 값은 useParams를 이용해 state로 저장하고
+                    일기 데이터 배열중에 URL ID 파라미터와 일치하는 일기를 렌더링해줍니다
+                  </p>
+                  <p>
+                    데이터 수정도 일기 생성과 마찬가지로 Context API을 이용해 데이터를 넘겨준 후 localStorage 저장소에
+                    일기 정보를 배열로 저장합니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h4>3. 일기삭제</h4>
+                <div>
+                  <p>
+                    제거할 일기의 ID 값을 Context API을 이용해 데이터를 넘겨준 다음 useReducer를 이용하여 제거할 데이터를 제외한 나머지 데이터를 localStorage 저장소에
+                    배열로 저장합니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h4>4. 정렬(최신순, 오래된순)</h4>
+                <div>
+                  <p>
+                    Array.sort 메소드를 사용해서 일기의 date 값을 비교해 정렬 순서를 변경합니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h4>5. 정렬(전부다, 좋음감정, 안좋은감정)</h4>
+                <div>
+                  <p>
+                    감정별로 완전 좋음(1) ~ 끔찍함(5)을 기준으로 Array.filter 메소드를 이용해 감정이 3보다 크거나 같을 때 완전좋음, 좋음, 그럭저럭 3보다 작을 때 나쁨, 끔찍함을 정렬합니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h4>6. 날짜별 일기 저장</h4>
+                <div>
+                  <p>
+
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>

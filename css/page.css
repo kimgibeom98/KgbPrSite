@@ -118,9 +118,26 @@
     
     /* PORTFOLIO str */
     /* DETAILPOP str*/
-    .DetailPop{width: 100%; height: 100vh; margin: 0 auto; z-index: 999; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.5);}
-    .DetailPop > div{background-color: rgb(235, 235, 235); height: 100%; width: calc(100% - 80px); max-width: 920px; margin: 0 auto;}
+    .DetailPop{width: 100%; display: block; height: 100vh; margin: 0 auto; z-index: 999; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.5);}
+    .DetailPop > div{display: block; background-color: rgb(235, 235, 235); overflow-y: auto; padding: 90px 70px; box-sizing: border-box; height: 100%; width: calc(100% - 80px); max-width: 920px; margin: 0 auto;}
     .DetailPop > button.CloseBtn{border: none; display: block; position: absolute; right: calc(25% + 20px); text-indent: -9999px; background: url('../img/close_pop.png') 50% 50% no-repeat; background-size: 20px 20px; width: 40px; height: 40px;}
+    .DetailPop > div > h2{font-size: 2.5rem; border-bottom: 1px solid #c8c8c8; padding-bottom: 30px; margin-bottom: 30px;}
+    .DetailPop > div > ul{padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid #c8c8c8;}
+    .DetailPop > div > ul > li{display: flex;}
+    .DetailPop > div > ul > li:not(:last-of-type){margin-bottom: 25px;}
+    .DetailPop > div > ul > li > *{font-size: 1.1rem; display: block;}
+    .DetailPop > div > ul > li > span{width: 15%; color: #787878;}
+    .DetailPop > div > ul > li > p{margin-left: 2%; width: 83%;}
+    .DetailPop > div > ul > li > p > a{color: blue;}
+    .DetailPop > div > div.DetailText > h3{font-size: 1.7rem; margin-bottom: 20px;}
+    .DetailPop > div > div.DetailText > p{font-size: 1.15rem; line-height: 1.4; display: block; margin-bottom: 30px;}
+    .DetailPop > div > div.DetailText > ul{margin-bottom: 30px;}
+    .DetailPop > div > div.DetailText > ul > li{font-size: 1.15rem; margin-bottom: 10px;}
+    .DetailPop > div > div.DetailText div.DetailSubtext > ol > li{margin-bottom: 30px;}
+    .DetailPop > div > div.DetailText div.DetailSubtext > ol > li > h4{font-size: 1.5rem; margin-bottom: 15px;}
+    .DetailPop > div > div.DetailText div.DetailSubtext > ol > li > div > p{font-size: 1.15rem; line-height: 1.4;}
+    .DetailPop > div > div.DetailText div.DetailSubtext > ol > li > div > p:first-of-type{margin-bottom: 15px;}
+    .DetailPop > div img.DetailImg{display: block; width: 100%; margin: 0 auto 30px; max-width: 636px;}
     /* DETAILPOP fin*/
     /* PORTFOLIOBlack str */
     section.PortfolioArea{position: relative; width: calc(100% - 100px); margin-left: auto;}
