@@ -1,20 +1,21 @@
 $(document).ready(function () {
 
-  // ClickEven str
-  ClickEven(".MenuDefault", ".Menu");
-  ClickEven(".Click", ".Check");
-  ClickEven(".Click", ".Opacity");
-  // ClickEven fin
+  // clickEven str
+  clickEven(".MenuDefault", ".Menu");
+  clickEven(".Click", ".Check");
+  clickEven(".Click", ".Opacity");
+  // clickEven fin
 
-  // ScrollEven str
-  ScrollEven("section.AboutArea", "section.AboutArea .whiteBackground");
-  ScrollEven("section.SkillArea", "section.SkillArea .WhiteBackground");
-  ScrollEven("section.PortfolioArea", "section.PortfolioArea .PfWhite");
-  // ScrollEven fin
+  // scrollEven str
+  scrollEven("section.AboutArea", "section.AboutArea .whiteBackground");
+  scrollEven("section.PortfolioArea", "section.PortfolioArea .PfWhite");
+  scrollEven(".ChildLine");
+  scrollEven(".light");
+  // scrollEven fin
 });
 
-// ClickEven str
-function ClickEven(Click, BOX) {
+// clickEven str
+function clickEven(Click, BOX) {
   $('.HeaderMenu').on('touchmove mousewheel', function (e) {
     e.preventDefault();
   });
@@ -27,10 +28,10 @@ function ClickEven(Click, BOX) {
     $(".Menu").removeClass('active');
   });
 }
-// ClickEven fin
+// clickEven fin
 
-// ScrollEven str
-function ScrollEven(Scroll, BOX) {
+// scrollEven str
+function scrollEven(Scroll, BOX) {
   $(window).scroll(function () {
     var divOffsetTop = $(Scroll).offset().top;
     var scrollTop = $(window).scrollTop() + ($(window).height() / 1.5);
@@ -48,7 +49,7 @@ function ScrollEven(Scroll, BOX) {
   })
 
   $(window).scroll(function () {
-    $('.ChildLine').each(function () {
+    $(Scroll).each(function () {
       if ($(window).scrollTop() > $(this).offset().top - ($(window).height() / 1.5)) {
         $(this).addClass('active');
       } else {
@@ -56,36 +57,42 @@ function ScrollEven(Scroll, BOX) {
       }
     })
   });
-
-  $(window).scroll(function () {
-    $('.light').each(function () {
-      if ($(window).scrollTop() > $(this).offset().top - ($(window).height() / 1.5)) {
-        $(this).addClass('on');
-      } else {
-        $(this).removeClass('on');
-      }
-    })
-  });
 }
-    // ScrollEven fin
+// scrollEven fin
 
-  const cursor = document.querySelector(".cursor");
-  document.addEventListener("mousemove", (e) => {
-    let x = e.clientX;
-    let y = e.clientY;
-    cursor.style.top = `${y}px`
-    cursor.style.left = `${x}px`
-    cursor.style.display = "block";
-  })
-  document.addEventListener("mouseout", () => {
-    cursor.style.display = "none";
-  })
+const cursor = document.querySelector(".cursor");
+const targetBack = document.querySelector('.DetailPop');
+const body = document.querySelector('body');
 
 
-  function openPop(target) {
-    const body = document.querySelector('body');
-    const targetPopup = document.querySelector(`.${target}`);
-    console.log(body)
-    body.style.overflow = "hidden";
+function openPop(target) {
+  const targetPopup = document.querySelector(`.${target}`);
+  targetBack.style.display = "block"
+  targetPopup.style.display = "block"
+  body.style.overflow = "hidden";
+}
+
+function closePop() {
+  const detailMainbox = document.querySelectorAll('.DetailPop > div');
+  for (let i = 0; i < detailMainbox.length; i++) {
+    detailMainbox[i].style.display = 'none';
+
   }
+  body.style.overflow = "auto";
+  targetBack.style.display = 'none';
+}
 
+function moveCursor(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+  cursor.style.top = `${y}px`
+  cursor.style.left = `${x}px`
+  cursor.style.display = "block";
+}
+
+function cursorOut() {
+  cursor.style.display = "none";
+}
+
+document.addEventListener("mousemove", moveCursor);
+document.addEventListener("mouseout", cursorOut);
