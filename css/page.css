@@ -1,13 +1,15 @@
     /* intro str */
-    section.IntroArea{display: flex; position: relative; width: calc(100% - 100px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
-    section.IntroArea > div.IntroText{ width: calc(100% - 40px); max-width: 1574px; margin: 0 auto;}
-    section.IntroArea > div.IntroText h2{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 5.7rem; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
-    section.IntroArea > div.IntroText h2:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
-    section.IntroArea > div.IntroText h2 > span{animation: text_reveal_box 1s ease; animation-delay: .5s; background-color: #dc143c; position: absolute; top: 0; left: 0; height: 100%; width: 0;}
-    section.IntroArea > div.IntroText h2:last-of-type{color: transparent; font-size: 2rem;}
-    section.IntroArea > div.IntroText > a{position: relative; display: flex; align-items: center; justify-content: center; border: 1px solid #dc143c; width: 135px; height: 40px; background: transparent; color: #fff;}
-    section.IntroArea > div.IntroText > a::after{content: ''; display: block; height: 100%; background-color: #dc143c; position: absolute; left: 0; top: 0; width: 0%; z-index: -1; overflow: hidden; transition-property: width; transition-duration: 0.5s;}
-    section.IntroArea > div.IntroText > a:hover::after{width: 100%;}
+    section.IntroArea{display: flex; overflow: hidden; position: relative; width: calc(100% - 100px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
+    section.IntroArea > h1.IntroText{ width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; position: relative; display: block;}
+    section.IntroArea > h1.IntroText::before{content: '<h1>'; position: absolute; display: block; color: #515152; top: -25px; font-size: 1.3rem;  }
+    section.IntroArea > h1.IntroText::after{content: '</h1>'; position: absolute; display: block; color: #515152; bottom: -30px; font-size: 1.3rem;}
+    section.IntroArea > h1.IntroText div{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 5.7rem; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
+    section.IntroArea > h1.IntroText div:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
+    section.IntroArea > h1.IntroText div > span{animation: text_reveal_box 1s ease; animation-delay: .5s; background-color: #dc143c; position: absolute; top: 0; left: 0; height: 100%; width: 0;}
+    section.IntroArea > h1.IntroText div:last-of-type{color: transparent; font-size: 2rem;}
+    section.IntroArea > h1.IntroText > a{position: relative; display: flex; align-items: center; justify-content: center; border: 1px solid #dc143c; width: 135px; height: 40px; background: transparent; color: #fff;}
+    section.IntroArea > h1.IntroText > a::after{content: ''; display: block; height: 100%; background-color: #dc143c; position: absolute; left: 0; top: 0; width: 0%; z-index: -1; overflow: hidden; transition-property: width; transition-duration: 0.5s;}
+    section.IntroArea > h1.IntroText > a:hover::after{width: 100%;}
     section.IntroArea > div.ScrollDown{ transform: rotate(-90deg); position: absolute; bottom: 50px; left: 25px;}
     section.IntroArea > div.ScrollDown > span{position: relative; padding-left: 20px; display: block; font-size: 0.9rem; color: white; animation: text_move 1s ease; animation-iteration-count: infinite;}
     section.IntroArea > div.ScrollDown > span::before{transform: rotate(90deg);  position: absolute; left: 0; bottom: 0; display: block; content: ''; background: url('../img/under-arrow.png') no-repeat center center; width: 17px; height: 10px; }
@@ -26,8 +28,16 @@
       50% {transform: translateX(-15px);}
       100% {transform: translateX(0);}
     }
+    .elementChild{pointer-events: none; width: 40px; height: 40px; display: inline-block; position: absolute; border: 2px solid; transform: translate(-50%, -50%); animation: cursoranime 1s linear infinite; border-radius: 50%;}
+    @keyframes cursoranime {
+      0% {width: 0px; height: 0px; border-color: #dc143c;}
+      30% {border-color: #06ee7a;}
+      50% {border-color: #002aff}
+      80% {width: 200px; height: 200px; border-corlo: #ff00f6}
+      100% {width: 300px; height: 300px; border-color: #901efb;}
+    }
     /* intro fin */
-
+    
     /* About str */
     /* AboutBlack str */
     section.AboutArea{height: 100vh; position: relative;}
@@ -59,7 +69,6 @@
     section.AboutArea div.Click:hover{transform: scale(1.2);}
     .TopText{bottom: calc(100% - 250px); left: 142px; z-index: 10;}
     /* AboutBlack fin */
-
 
     /* AboutWhite str */
     section.AboutArea div.whiteBackground{z-index: 11; color: black; width: 100%; height: 100vh; background-color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
@@ -93,7 +102,6 @@
     /* AboutDetail fin */
     /* About fin */
 
-
     /* Skill str */
     section.SkillArea{height: 100vh; width: calc(100% - 100px); margin-left: auto;  position: relative; min-height: 740px;}
     section.SkillArea div.SkillContent{align-items: center; display: flex; width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; padding-top: 115px; }
@@ -114,7 +122,6 @@
     section.SkillArea div.SkillContent > div:last-of-type > div.ContourLine > div.active{width: 100%; box-shadow: 0 0 20px #06ee7a, 0 0 30px #06ee7a;}
     section.SkillArea div.SkillContent > div:last-of-type ul li img{display: block; max-width: 80px; margin: 0 auto;}
     /* skill fin */
-    
     
     /* PORTFOLIO str */
     /* DETAILPOP str*/
@@ -169,7 +176,6 @@
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a.GitSite::before{content: ''; position: absolute; left: 10px; width: 30px; height: 30px; background: url('../img/github2.png') 50% 50% no-repeat; background-size: 22px 22px;}
     /* PORTFOLIOBlack fin */
 
-
     /* PORTFOLIOWhite str */
     section.PortfolioArea div.PfWhite{width: 100%; margin: 0 auto; height: 100%; color: white; z-index: 11; background-color: white; overflow: hidden; position: absolute; left: 0; bottom: 0;}
     section.PortfolioArea div.PfFull{position: absolute; box-sizing: border-box; left: 0; bottom: 0; padding-bottom: 75px; width: 100%;}
@@ -179,7 +185,6 @@
     /* PORTFOLIOWhite fin */
     /* PORTFOLIO fin */
 
-    
     /* CONTACT str */
     section.ContactArea{color: white; position: relative; width: calc(100% - 100px); margin-left: auto; padding-bottom: 260px;}
     section.ContactArea > div:last-of-type{width: calc(100% - 40px); padding-top: 115px; max-width: 1574px; margin: 0 auto;}
@@ -202,55 +207,17 @@
     section.ContactArea div.light.active div.bulb span:nth-of-type(2){box-shadow: -20px 20px 0 10px #fff;}
     section.ContactArea div.wire{position: absolute; left: calc(50% - 2px); bottom: 140%; width: 4px; height: 146px; background: #000;}
     section.ContactArea div.light.active{background: radial-gradient(#555, #111);}
-    section.ContactArea div.light.active div.bulb::after{content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: #fff; border-radius: 50%; filter: blur(40px);}
     section.ContactArea div.light.active div.bulb{background: #fff; box-shadow: 0 0 50px #fff, 0 0 100px #fff;}
+    section.ContactArea div.light.active div.bulb::after{content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: #fff; border-radius: 50%; filter: blur(40px);}
     section.ContactArea div.light.active div.bulb::before{background: #fff;}
     /* CONTACT fin */
 
+    @media screen and (max-width: 1600px){
 
-     /* sub DetailLUS str */
-    section.SubPage{color: white; position: relative;}
-    section.SubPage h2{font-size: 50px; font-weight: 700; padding-top: 120px;}
-    section.SubPage figure{display: flex; flex-direction: row-reverse; align-items: flex-end; margin-bottom: 110px;}
-    section.SubPage figure img{display: block; width: 100%; max-width: 683px; margin-left: 150px;} 
-    section.SubPage figure figcaption ul{margin-bottom: 60px;}
-    section.SubPage figure figcaption ul li:first-of-type strong{font-size: 80px; margin-bottom: 25px;}
-    section.SubPage figure figcaption ul li{ margin-bottom: 20px; font-size: 20px; text-align: right;}
-    section.SubPage figure figcaption ul li strong{font-size: 25px;}
-    section.SubPage div h3{ font-size: 30px; margin-bottom: 40px; font-weight: 700;}
-    section.SubPage div > img:first-of-type{display: block; width: 100%; max-width: 620px; margin-bottom: 20px;}
-    section.SubPage div ul,
-    section.SubPage div div.ImgText{margin-bottom: 40px;}
-    section.SubPage div div.ImgText span{font-size: 17px; display: inline-block;}
-    section.SubPage div div.ImgText span:not(:first-of-type){margin-left: 40px;}
-    section.SubPage div > p{font-size: 17px; line-height: 26px; margin-bottom: 60px; max-width: 50%;}
-    section.SubPage div h4{ font-size: 25px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid white;}
-    section.SubPage div ul.LastUl li{ font-size: 20px; font-weight: 500;}
-    section.SubPage div ul.FirstUl li,
-    section.SubPage div ul.LastUl li:not(:last-of-type){margin-bottom: 20px;}
-    section.SubPage div ul.LastUl::after{content: ''; visibility: hidden; display: block; clear: both;}
-    section.SubPage div ul.LastUl li div.Color{display: block; padding: 25px 0; text-indent: -9999px; margin-bottom: 15px;}
-    section.SubPage div ul.LastUl li div.MainColor{width: 310px; background-color: #ffffff; }
-    section.SubPage div ul.LastUl li div.SubColor1{width: 145px; background-color: #aba8a8; }
-    section.SubPage div ul.LastUl li div.SubColor2{width: 145px; background-color: #000000; }
-    section.SubPage div ul.LastUl li span{font-size: 15px; line-height: 20px;}
-    section.SubPage div ul.LastUl li{float: left;}
-    /* sub DetailLUS fin */
+    }
+    @media screen and (max-width: 1280px){
 
-
-    /* sub DetailLOV str */
-    section.LouisvuittonDetail div ul.LastUl li div.MainColor{background-color: #eee; }
-    section.LouisvuittonDetail div ul.LastUl li div.SubColor1{background-color: #cc2915; }
-    section.LouisvuittonDetail div ul.LastUl li div.SubColor2{background-color: #19120c; }
-    /* sub DetailLOV fin */
-
-
-    /* sub DetailPAC str */
-    section.ParadiseDetail div ul.LastUl li div.MainColor{background-color: #977e5c;}
-    section.ParadiseDetail div ul.LastUl li div.SubColor1{background-color: #d0b79c; }
-    section.ParadiseDetail div ul.LastUl li div.SubColor2{background-color: #21201e; }
-    /* sub DetailPAC fin */
-
+    }
 
 
     

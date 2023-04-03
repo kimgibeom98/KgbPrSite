@@ -63,7 +63,8 @@ function scrollEven(Scroll, BOX) {
 const cursor = document.querySelector(".cursor");
 const targetBack = document.querySelector('.DetailPop');
 const body = document.querySelector('body');
-
+const introCursorBox = document.querySelector('.IntroArea');
+const introCursor = document.querySelector('.IntroCursor');
 
 function openPop(target) {
   const targetPopup = document.querySelector(`.${target}`);
@@ -88,11 +89,30 @@ function moveCursor(e) {
   cursor.style.top = `${y}px`
   cursor.style.left = `${x}px`
   cursor.style.display = "block";
+  if (introCursorBox) {
+    let introX = e.clientX - introCursorBox.offsetLeft;
+    let introY = e.clientY - introCursorBox.offsetTop;
+
+    let element = document.createElement('span');
+    element.setAttribute('class', 'elementChild');
+    element.style.left = `${introX}px`
+    element.style.top = `${introY}px`
+
+    introCursor.appendChild(element);
+    setTimeout(() => {
+      element.remove()
+    }, 1000)
+  }
 }
 
 function cursorOut() {
-  cursor.style.display = "none";
+  introCursor.style.display = "none";
+}
+
+function cursorIn() {
+  introCursor.style.display = "block";
 }
 
 document.addEventListener("mousemove", moveCursor);
-document.addEventListener("mouseout", cursorOut);
+introCursorBox.addEventListener("mouseleave", cursorOut);
+introCursorBox.addEventListener("mouseover", cursorIn)

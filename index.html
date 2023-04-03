@@ -17,12 +17,10 @@
   <!-- header str -->
   <header class="MenuActive">
     <div class="LeftMenu">
-      <h1 location.href="index.html" ;>
-        <a href="index.html">
-          <img src="img/main_logo.png" alt="기범 메인로고">
-          <span>FE Developer</span>
-        </a>
-      </h1>
+      <a href="index.html">
+        <img src="img/main_logo.png" alt="기범 메인로고">
+        <span>FE Developer</span>
+      </a>
       <div class="MenuDefault Menu">
         <span></span>
         <span></span>
@@ -48,15 +46,16 @@
 
   <!-- intro str -->
   <section class="IntroArea" id="HOME">
+    <div class="IntroCursor"></div>
     <div class="BackgroundText">
       <span>HOME</span>
     </div>
-    <div class="IntroText">
-      <h2>GiBeom <span></span></h2>
-      <h2>PORTFOLIO <span></span></h2>
-      <h2>Front End Developer / publisher <span></span></h2>
+    <h1 class="IntroText">
+      <div>GiBeom <span></span></div>
+      <div>PORTFOLIO <span></span></div>
+      <div>Front End Developer / publisher <span></span></div>
       <a href="#PORTFOLIO" data-tabNumb="PORTFOLIO">PORTFOLIO</a>
-    </div>
+    </h1>
     <div class="ScrollDown">
       <span>scroll down</span>
     </div>
@@ -286,7 +285,8 @@
                 <h4>5. 정렬(전부다, 좋음감정, 안좋은감정)</h4>
                 <div>
                   <p>
-                    감정별로 완전 좋음(1) ~ 끔찍함(5)을 기준으로 Array.filter 메소드를 이용해 감정이 3보다 크거나 같을 때 완전좋음, 좋음, 그럭저럭 3보다 작을 때 나쁨, 끔찍함을 정렬합니다.
+                    감정별로 완전 좋음(1) ~ 끔찍함(5)을 기준으로 Array.filter 메소드를 이용해 감정이 3보다 크거나 같을 때 완전좋음, 좋음, 그럭저럭 3보다 작을 때 나쁨, 끔찍함을
+                    정렬합니다.
                   </p>
                 </div>
               </li>
@@ -325,7 +325,8 @@
         <!-- <img class="DetailImg" src="img/detail_emotion.png" alt=""> -->
         <div class="DetailText">
           <h3>소개</h3>
-          <p>OpenWeatherMap과 React를 이용해서 만든 날씨 정보 앱입니다. json-server를 이용하여 REST API를 구축하였고 폴더구조를 CRWAL(날씨 데이터 수집), API(날씨 데이터 정보), APP(화면 렌더링)으로 나눠서 관리하였습니다.</p>
+          <p>OpenWeatherMap과 React를 이용해서 만든 날씨 정보 앱입니다. json-server를 이용하여 REST API를 구축하였고 폴더구조를 CRWAL(날씨 데이터 수집), API(날씨
+            데이터 정보), APP(화면 렌더링)으로 나눠서 관리하였습니다.</p>
           <h3>기술 사항</h3>
           <ul>
             <li>- 정각마다 날씨 정보 업데이트</li>
@@ -342,7 +343,8 @@
                 <h4>1. 정각마다 날씨 정보 업데이트</h4>
                 <div>
                   <p>
-                    CRWAL 폴더에서 npm start시 정각마다 실행되는 스케줄러가 작동되어 axios.get으로 날씨 정보를 요청받은 후 axios.put으로 해당 데이터를 API 폴더에 있는 db.json으로 전달해줍니다. 
+                    CRWAL 폴더에서 npm start시 정각마다 실행되는 스케줄러가 작동되어 axios.get으로 날씨 정보를 요청받은 후 axios.put으로 해당 데이터를 API 폴더에 있는
+                    db.json으로 전달해줍니다.
                   </p>
                 </div>
               </li>
@@ -350,7 +352,7 @@
                 <h4>2. 날씨 정보 상세, 5일 / 3시간 예보</h4>
                 <div>
                   <p>
-                    1번 동작에서 수집된 날씨 정보를 이용해 API 폴더 에 저장되어있는 데이터를 APP 폴더 에서 axios.get으로 요청받은 후 해당 정보를 렌더링해 줍니다. 
+                    1번 동작에서 수집된 날씨 정보를 이용해 API 폴더 에 저장되어있는 데이터를 APP 폴더 에서 axios.get으로 요청받은 후 해당 정보를 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
@@ -358,7 +360,7 @@
                 <h4>3. 마지막 동기화 날짜 표출</h4>
                 <div>
                   <p>
-                    1번 동작에서 데이터 수집 시 moment.js를 이용해 수집된 시간을 전달 후 전달된 날짜를 렌더링해 줍니다. 
+                    1번 동작에서 데이터 수집 시 moment.js를 이용해 수집된 시간을 전달 후 전달된 날짜를 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
@@ -366,7 +368,7 @@
                 <h4>4. 버튼 클릭 시 5일 / 3시간 예보 화면 변환</h4>
                 <div>
                   <p>
-                    현재 화면이 yview인지 xview인지를 state에 저장 후 버튼 클릭 시 옵셔널체이닝을 이용해서 yview일 때는 세로형으로 xview일 때는 가로형으로 렌더링해 줍니다. 
+                    현재 화면이 yview인지 xview인지를 state에 저장 후 버튼 클릭 시 옵셔널체이닝을 이용해서 yview일 때는 세로형으로 xview일 때는 가로형으로 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
@@ -374,7 +376,8 @@
                 <h4>5. 한글, 영어 언어 선택</h4>
                 <div>
                   <p>
-                    select박스 onChange시 setLanguage(e.target.value)를 이용해 state를 변경합니다. 변경 후 state로 옵셔널체이닝을 이용해서 한글로 보여줄지 영어로 보여줄지 판별 후 렌더링해 줍니다.
+                    select박스 onChange시 setLanguage(e.target.value)를 이용해 state를 변경합니다. 변경 후 state로 옵셔널체이닝을 이용해서 한글로 보여줄지
+                    영어로 보여줄지 판별 후 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
@@ -382,95 +385,8 @@
                 <h4>6. 날씨에 따른 style 변환</h4>
                 <div>
                   <p>
-                    2번 동작에서 axios.get으로 요청받은 후 현재 날씨가 Clear일 때와 그렇지 않을 때를 state에 저장 후 styled-components를 이용해 Props를 통한 조건부 스타일링을 해줍니다.
-                  </p>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <div class="GibeomDetail">
-        <h2>김기범 PRSITE</h2>
-        <ul>
-          <li>
-            <span>간단 소개</span>
-            <p>저를 소개하는 PRSITE 입니다.</p>
-          </li>
-          <li>
-            <span>사용 기술</span>
-            <p>HTML, CSS, Javascript, jquery</p>
-          </li>
-          <li>
-            <span>구성원</span>
-            <p>개인프로젝트</p>
-          </li>
-          <li>
-            <span>사이트 바로가기</span>
-            <p><a href="http://gi0813.cafe24.com/Publishing/KGBPR/step1/" target="_blank">김기범 PRSITE</a></p>
-          </li>
-        </ul>
-        <!-- <img class="DetailImg" src="img/detail_emotion.png" alt=""> -->
-        <div class="DetailText">
-          <h3>소개</h3>
-          <p>OpenWeatherMap과 React를 이용해서 만든 날씨 정보 앱입니다. json-server를 이용하여 REST API를 구축하였고 폴더구조를 CRWAL(날씨 데이터 수집), API(날씨 데이터 정보), APP(화면 렌더링)으로 나눠서 관리하였습니다.</p>
-          <h3>기술 사항</h3>
-          <ul>
-            <li>- 정각마다 날씨 정보 업데이트</li>
-            <li>- 날씨 정보 상세</li>
-            <li>- 5일 / 3시간 예보</li>
-            <li>- 마지막 동기화 날짜 표출</li>
-            <li>- 버튼 클릭 시 5일 / 3시간 예보 화면 변환</li>
-            <li>- 한글, 영어 언어 선택</li>
-            <li>- 날씨에 따른 style 변환</li>
-          </ul>
-          <div class="DetailSubtext">
-            <ol>
-              <li>
-                <h4>1. 정각마다 날씨 정보 업데이트</h4>
-                <div>
-                  <p>
-                    CRWAL 폴더에서 npm start시 정각마다 실행되는 스케줄러가 작동되어 axios.get으로 날씨 정보를 요청받은 후 axios.put으로 해당 데이터를 API 폴더에 있는 db.json으로 전달해줍니다. 
-                  </p>
-                </div>
-              </li>
-              <li>
-                <h4>2. 날씨 정보 상세, 5일 / 3시간 예보</h4>
-                <div>
-                  <p>
-                    1번 동작에서 수집된 날씨 정보를 이용해 API 폴더 에 저장되어있는 데이터를 APP 폴더 에서 axios.get으로 요청받은 후 해당 정보를 렌더링해 줍니다. 
-                  </p>
-                </div>
-              </li>
-              <li>
-                <h4>3. 마지막 동기화 날짜 표출</h4>
-                <div>
-                  <p>
-                    1번 동작에서 데이터 수집 시 moment.js를 이용해 수집된 시간을 전달 후 전달된 날짜를 렌더링해 줍니다. 
-                  </p>
-                </div>
-              </li>
-              <li>
-                <h4>4. 버튼 클릭 시 5일 / 3시간 예보 화면 변환</h4>
-                <div>
-                  <p>
-                    현재 화면이 yview인지 xview인지를 state에 저장 후 버튼 클릭 시 옵셔널체이닝을 이용해서 yview일 때는 세로형으로 xview일 때는 가로형으로 렌더링해 줍니다. 
-                  </p>
-                </div>
-              </li>
-              <li>
-                <h4>5. 한글, 영어 언어 선택</h4>
-                <div>
-                  <p>
-                    select박스 onChange시 setLanguage(e.target.value)를 이용해 state를 변경합니다. 변경 후 state로 옵셔널체이닝을 이용해서 한글로 보여줄지 영어로 보여줄지 판별 후 렌더링해 줍니다.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <h4>6. 날씨에 따른 style 변환</h4>
-                <div>
-                  <p>
-                    2번 동작에서 axios.get으로 요청받은 후 현재 날씨가 Clear일 때와 그렇지 않을 때를 state에 저장 후 styled-components를 이용해 Props를 통한 조건부 스타일링을 해줍니다.
+                    2번 동작에서 axios.get으로 요청받은 후 현재 날씨가 Clear일 때와 그렇지 않을 때를 state에 저장 후 styled-components를 이용해 Props를 통한
+                    조건부 스타일링을 해줍니다.
                   </p>
                 </div>
               </li>
@@ -547,7 +463,7 @@
           </li>
           <li>
             <figure>
-              <img src="img/portfolio01.png" alt="기범PRSITE">
+              <img src="img/portfolio12.png" alt="기범PRSITE">
               <figcaption>
                 <h3>김기범PRSITE</h3>
                 <p>저를 소개하는 PR포트폴리오 사이트 입니다.</p>
@@ -560,8 +476,8 @@
                     <li>#반응형웹</li>
                   </ul>
                   <div class="BtnBox">
-                    <a href="http://gi0813.cafe24.com/Publishing/KGBPR/step1/" class="GoSite" target="_blank">사이트 바로가기</a>
-                    <a href="javascript:openPop('GibeomDetail');" class="DetailBtn">Detail</a>
+                    <a href="http://gi0813.cafe24.com/Publishing/KGBPR/step1/" class="GoSite" target="_blank">사이트
+                      바로가기</a>
                     <a href="https://github.com/kimgibeom98/kgb-prsite" class="GitSite" target="_blank">GitHub</a>
                   </div>
                 </div>
@@ -636,21 +552,22 @@
             </li>
             <li>
               <figure>
-                <img src="img/portfolio01.png" alt="행정안전부">
+                <img src="img/portfolio12.png" alt="기범PRSITE">
                 <figcaption>
-                  <h3>행정안전부</h3>
-                  <p>퀀텀에듀솔루션 근무 당시 제작한 웹사이트입니다.</p>
+                  <h3>김기범PRSITE</h3>
+                  <p>저를 소개하는 PR포트폴리오 사이트 입니다.</p>
                   <div class="SkillandBtn">
                     <ul>
                       <li>#HTML</li>
                       <li>#CSS</li>
                       <li>#Javascript</li>
                       <li>#jquery</li>
-                      <li>#swiper</li>
                       <li>#반응형웹</li>
                     </ul>
                     <div class="BtnBox">
-                      <a href="https://www.mois.go.kr/frt/a01/frtMain.do" class="GoSite" target="_blank">사이트 바로가기</a>
+                      <a href="http://gi0813.cafe24.com/Publishing/KGBPR/step1/" class="GoSite" target="_blank">사이트
+                        바로가기</a>
+                      <a href="https://github.com/kimgibeom98/kgb-prsite" class="GitSite" target="_blank">GitHub</a>
                     </div>
                   </div>
                 </figcaption>

@@ -120,7 +120,7 @@ section.IntroArea,
 a.GitSite,
 a.DetailBtn,
 .ContentTitle,
-header h1{
+header > div.LeftMenu > a > span{
     font-family: 'Raleway'
 }
 
