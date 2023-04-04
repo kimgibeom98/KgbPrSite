@@ -17,7 +17,7 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:14px;
+    font-size:62.5%;
     vertical-align:baseline;
     background:transparent;
 }
@@ -50,7 +50,7 @@ q:before, q:after {
 a {
     margin:0;
     padding:0;
-    font-size:100%;
+    font-size:1.6rem;
     vertical-align:baseline;
     background:transparent;
     text-decoration: none;
@@ -124,8 +124,8 @@ header > div.LeftMenu > a > span{
     font-family: 'Raleway'
 }
 
-.ContentTitle{font-size: 5rem; font-weight: 700; color: #06ee7a; margin-bottom: 30px;}
+.ContentTitle{font-size: 7rem; font-weight: 700; color: #06ee7a; margin-bottom: 30px;}
 .Shadow{text-shadow: 0 0 10px white, 0 0 20px white;}
 .TitleShadow{text-shadow: 0 0 0 #06ee7a, 0 0 10px #06ee7a;}
 .BackgroundText{position: absolute; opacity: 0.03; z-index: -1; bottom: 0; right: 0; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
-.BackgroundText > span{color: white; font-size: 18rem; font-weight: 700;}
+.BackgroundText > span{color: white; font-size: 25.2rem; font-weight: 700;}
