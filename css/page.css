@@ -1,9 +1,10 @@
     /* intro str */
-    section.IntroArea{display: flex; overflow: hidden; position: relative; width: calc(100% - 100px); margin-left: auto; height: 100vh;flex-direction: column;justify-content: center;}
-    section.IntroArea > h1.IntroText{ width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; position: relative; display: block;}
+    section.ResizeWidth{width: calc(100% - 100px); margin-left: auto;}
+    section.IntroArea{display: flex; overflow: hidden; position: relative; height: 100vh;flex-direction: column;justify-content: center;}
+    section.IntroArea > h1.IntroText{position: relative; display: block;}
     section.IntroArea > h1.IntroText::before{content: '<h1>'; position: absolute; display: block; color: #515152; top: -25px; font-size: 1.8rem;  }
     section.IntroArea > h1.IntroText::after{content: '</h1>'; position: absolute; display: block; color: #515152; bottom: -30px; font-size: 1.8rem;}
-    section.IntroArea > h1.IntroText div{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 8.0rem; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
+    section.IntroArea > h1.IntroText div{color: transparent; animation: text_reveal .5s ease forwards; animation-delay: 1s; text-align: left; font-size: 9rem; width: fit-content; letter-spacing: 5px; margin-bottom: 20px; position: relative;}
     section.IntroArea > h1.IntroText div:first-of-type{animation: text_reveal_name .5s ease forwards; animation-delay: 1s;}
     section.IntroArea > h1.IntroText div > span{animation: text_reveal_box 1s ease; animation-delay: .5s; background-color: #dc143c; position: absolute; top: 0; left: 0; height: 100%; width: 0;}
     section.IntroArea > h1.IntroText div:last-of-type{color: transparent; font-size: 2.8rem;}
@@ -36,22 +37,23 @@
       80% {width: 200px; height: 200px; border-corlo: #ff00f6}
       100% {width: 300px; height: 300px; border-color: #901efb;}
     }
+    .ResizeSubwidth{max-width: 1574px; margin: 0 auto; width: calc(100% - 40px);}
     /* intro fin */
     
     /* About str */
     /* AboutBlack str */
     section.AboutArea{height: 100vh; position: relative;}
     section.AboutArea div.BlackBackground{color: white;}
-    section.AboutArea div.AboutmeBox2,
-    section.AboutArea div.AboutmeBox{padding-top: 115px;  max-width: 1300px; margin: 0 auto; width: 100%;}
+    section.AboutArea div.AboutmeBox{padding-top: 115px;}
     section.AboutArea div.AboutmeBox::after{content: ''; visibility: hidden; clear: both; display: block;}
-    section.AboutArea div.AboutmeBox p{float: left; margin: 300px 0 0 160px; font-size: 2.5rem; line-height: 48px;}
+    section.AboutArea div.AboutmeBox p{float: left; margin: 300px 0 0 160px; font-size: 2.5rem; line-height: 1.8;}
     section.AboutArea div.AboutmeBox p > strong{font-size: 2.5rem;}
-    section.AboutArea div.AboutmeBox div.AboutLeft{ float: left; width: 440px; height: 670px; position: relative; background: linear-gradient(45deg, #ff00f6 ,#002aff , #8400ff, #ff00f6, #002aff, #8400ff); background-size: 400%; animation: Neon2 10s linear infinite;}
+    section.AboutArea div.AboutmeBox > div{float: left; width: 440px; height: 670px; box-sizing: border-box; position: relative;}
+    section.AboutArea div.AboutmeBox > div > img{z-index: 1; display: block; width: 100%; max-width: 255px; position: absolute; right: -120px; bottom: 104px;}
+    section.AboutArea div.AboutmeBox div.AboutLeft{  background: linear-gradient(45deg, #ff00f6 ,#002aff , #8400ff, #ff00f6, #002aff, #8400ff); background-size: 400%; animation: Neon2 10s linear infinite;}
     section.AboutArea div.AboutmeBox div.AboutLeft::after{ content: ''; position: absolute; left: 5px; top: 5px; right:5px; bottom: 5px; background-color: #222222;}
     section.AboutArea div.AboutmeBox div.AboutLeft::before{content: ''; position: absolute; left: 5px; top: 5px; right:5px; bottom: 5px; filter: blur(30px); background: linear-gradient(45deg, #002aff ,#8400ff , #ff00f6, #002aff, #8400ff, #ff00f6); background-size: 400%; animation: Neon2 10s linear infinite;}
     section.AboutArea div.AboutmeBox div.AboutLeft > h2{font-size: 4rem; color: #06ee7a; font-weight: 500; padding: 35px 0 590px 45px; position: relative; z-index: 1;}
-    section.AboutArea div.AboutmeBox div.AboutLeft > img{ z-index: 1; display: block; width: 100%; max-width: 255px; position: absolute; right: -120px; bottom: 104px;}
     @keyframes Neon2{
         0%,100%{background-position: 0;}
         50%{background-position: 300%;}
@@ -67,14 +69,14 @@
     section.AboutArea div.Click span{font-size: 2.8rem;}
     section.AboutArea div.Click img{display: inline-block; width: 100%; max-width: 30px;}
     section.AboutArea div.Click:hover{transform: scale(1.2);}
-    .TopText{bottom: calc(100% - 250px); left: 142px; z-index: 10;}
+    .TopText{bottom: calc(100% - 250px); left: 22px; z-index: 10;}
     /* AboutBlack fin */
 
     /* AboutWhite str */
     section.AboutArea div.whiteBackground{z-index: 11; color: black; width: 100%; height: 100vh; background-color: white; position: absolute; left: 0; bottom: 0; overflow: hidden;}
-    section.AboutArea div.AboutmeBox div.AboutLeft2{ float: left; border: 5px solid black; width: 430px; position: relative;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2{ border: 5px solid black;}
     section.AboutArea div.AboutmeBox div.AboutLeft2 > h2{font-size: 4rem; font-weight: 500; padding: 30px 0 590px 40px;}
-    section.AboutArea div.AboutmeBox div.AboutLeft2 > img{display: block; width: 100%; max-width: 255px; position: absolute; right: -125px; bottom: 100px;}
+    section.AboutArea div.AboutmeBox div.AboutLeft2 > img{right: -125px; bottom: 99px;}
     section.AboutArea div.AboutmeFull{width: 100%; height: 100vh; position: absolute;  left: 0; bottom: 0;} 
     section.AboutArea div.ClickCheck2 span{color: white;}
     section.AboutArea div.ClickCheck2 img{filter: invert();}
@@ -84,7 +86,7 @@
     /* AboutDetail str */
     div.Opacity{opacity: 0; z-index: -1; transition-property: opacity, z-index; width: 100%;}
     div.DetailFUll{animation: Neon 3s infinite; position: absolute; left: 0; bottom: 0px; height: 100vh;background: linear-gradient(153.5deg ,#222222 50%, #ffa143 50%);}
-    div.FullBox{padding-bottom: 40px; position: absolute; left: calc(50% - 515px); top: calc(50% - 342px); max-width: 1030px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px white;}
+    div.FullBox{padding-bottom: 40px; position: absolute; left: calc(50% - 442px); top: calc(50% - 342px); max-width: 984px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px white;}
     div.Opacity.active{opacity: 1; z-index: 100; transition-duration: 1s;transition-delay: 1s;}
     div.FullBox h3{font-size: 4rem; text-align: center; padding: 40px 0 60px 0; font-weight: 500;}
     div.FullBox::after{content: ''; visibility: hidden; display: block; clear: both;}
@@ -103,10 +105,10 @@
     /* About fin */
 
     /* Skill str */
-    section.SkillArea{height: 100vh; width: calc(100% - 100px); margin-left: auto;  position: relative; min-height: 740px;}
-    section.SkillArea div.SkillContent{align-items: center; display: flex; width: calc(100% - 40px); max-width: 1574px; margin: 0 auto; padding-top: 115px; }
+    section.SkillArea{height: 100vh;  position: relative; min-height: 740px;}
+    section.SkillArea div.SkillContent{align-items: center; display: flex; padding-top: 115px; }
     section.SkillArea div.SkillContent > div{width: 50%;}
-    section.SkillArea div.SkillContent > div:first-of-type > p{font-size: 2rem; margin-bottom: 50px; color: white; line-height: 1.5;}
+    section.SkillArea div.SkillContent > div:first-of-type > p{font-size: 2rem; margin-bottom: 50px; color: white; line-height: 1.5; word-break: keep-all;}
     section.SkillArea div.SkillContent > div:first-of-type > div{ padding: 30px; max-width: 560px; box-sizing: border-box; background-color: #2a2a2a; }
     section.SkillArea div.SkillContent > div:first-of-type > div > strong{display: block; color: white; font-size: 2.4rem; margin-bottom: 20px;}
     section.SkillArea div.SkillContent > div:first-of-type > div > span{display: block; font-size: 1.7rem; color: #ababab; margin-bottom: 20px;}
@@ -147,14 +149,14 @@
     .DetailPop > div img.DetailImg{display: block; width: 100%; margin: 0 auto 30px; max-width: 636px;}
     /* DETAILPOP fin*/
     /* PORTFOLIOBlack str */
-    section.PortfolioArea{position: relative; width: calc(100% - 100px); margin-left: auto;}
-    section.PortfolioArea div.BackgroundText{left: 22px; z-index: -1;}
-    section.PortfolioArea div.PfBlack{max-width: 1574px;  width: 100%; padding: 115px 0 125px 0; margin: 0 auto; color: white; }
+    section.PortfolioArea{position: relative;}
+    section.PortfolioArea div.BackgroundText{z-index: -1;}
+    section.PortfolioArea div.PfBlack{padding: 115px 0; color: white; }
     section.PortfolioArea div.PfBlack div.pfIntro p > a{text-shadow: 0 0 10px #dc143c, 0 0 20px #dc143c;}
     section.PortfolioArea div.pfIntro{margin-bottom: 50px; display: flex; align-items: end; justify-content: space-between;}
     section.PortfolioArea div.pfIntro p{ font-size: 2rem; color: white; line-height: 1.5;}
     section.PortfolioArea div.pfIntro p > a{color: #dc143c; font-size: 2rem;}
-    section.PortfolioArea div.pfIntro > a{width: 220px; height: 50px; background-color: #dc143c; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; color: white;}
+    section.PortfolioArea div.pfIntro > a{padding: 0 40px; height: 50px; white-space: nowrap; background-color: #dc143c; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; color: white;}
     section.PortfolioArea div.ListBox > ul.PfList{display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 2rem; }
     section.PortfolioArea div.ListBox > ul.PfList > li{width: 100%; background-color: #1d1d1d; box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12);}
     section.PortfolioArea div.ListBox > ul.PfList > li figure > img{width: 100%; display: block; max-width: 556px;}
@@ -186,8 +188,8 @@
     /* PORTFOLIO fin */
 
     /* CONTACT str */
-    section.ContactArea{color: white; position: relative; width: calc(100% - 100px); margin-left: auto; padding-bottom: 260px;}
-    section.ContactArea > div:last-of-type{width: calc(100% - 40px); padding-top: 115px; max-width: 1574px; margin: 0 auto;}
+    section.ContactArea{color: white; position: relative; padding-bottom: 260px;}
+    section.ContactArea > div:last-of-type{padding-top: 115px;}
     section.ContactArea > div > P{font-size: 2rem; margin-bottom: 70px; color: white; line-height: 1.5;}
     section.ContactArea div.ConteactFull{width: 100%; max-width: 560px; margin: 0 auto ; display: flex; justify-content: space-between; text-align: center;}
     section.ContactArea div.Border{position: relative; width: 70px; height: 270px; border: 10px solid #8400ff; box-sizing: border-box;}
@@ -213,43 +215,51 @@
     /* CONTACT fin */
 
     @media screen and (max-width: 1600px){
-      .BackgroundText > span{font-size: 14rem;}
-      section.AboutArea div.AboutmeBox2,
-      section.AboutArea div.AboutmeBox{width: calc(100% - 120px); margin: 0; margin-left: auto;}
-      section.AboutArea div.AboutmeBox div.AboutLeft2 > img{right: -80px;}
-      section.AboutArea div.AboutmeBox div.AboutLeft > img{right: -75px;}
-      section.AboutArea div.AboutmeBox p{margin: 300px 0 0 84px;}
-      div.FullBox{left: calc(50% - 465px);}
-      section.PortfolioArea div.PfBlack{width: calc(100% - 40px); margin: 0 auto;}
+      .BackgroundText > span{font-size: 19rem;}
+      section.AboutArea div.AboutmeBox p{margin: 300px 0 0 80px;}
+      section.AboutArea div.AboutmeBox > div > img{right: -60px;}
+      section.AboutArea div.AboutmeBox div.AboutLeft2 > img{right: -65px;}
       section.PortfolioArea div.PfFull{padding: 0 20px 75px 20px;}
       section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.SkillandBtn{height: 219px;}
       section.PortfolioArea div.ListBox > ul.PfList{grid-gap: 1rem;}
-      section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a{padding: 0 17px;}
+      section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a{padding: 0 15px;}
     }
     
     @media screen and (max-width: 1280px){
-      section.ContactArea,
-      section.PortfolioArea,
-      section.SkillArea,
-      section.IntroArea{width: 100%; margin: 0;}
-      section.IntroArea > h1.IntroText{width: calc(100% - 80px);}
-      section.ContactArea > div:last-of-type,
-      section.PortfolioArea div.PfBlack,
-      section.SkillArea div.SkillContent,
-      section.AboutArea div.AboutmeBox2, section.AboutArea div.AboutmeBox{margin: 0 auto; width: calc(100% - 80px);}
+      section.ResizeWidth{width: 100%; margin: 0;}
+      .ResizeSubwidth{width: calc(100% - 80px);}
+      section.AboutArea div.AboutmeBox{padding-bottom: 40px;}
       section.PortfolioArea div.PfFull{padding: 0 40px 75px 40px;}
-      div.FullBox{left: calc(50% - 515px);}
-      section.AboutArea div.AboutmeBox div.AboutLeft2,
-      section.AboutArea div.AboutmeBox div.AboutLeft{float: none;}
-      section.AboutArea div.AboutmeBox p{float: none; margin-top: 40px;}
+      div.FullBox{left: calc(50% - 492px);}
+      section.AboutArea div.AboutmeBox > div{float: none;}
+      section.AboutArea div.AboutmeBox p{float: none; margin-top: 20px; margin-left: 0;}
       section.AboutArea div.AboutmeFull{height: auto;}
       section.AboutArea{height: 100%;}
+      .TopText{left: 40px;}
+      .BackgroundText > span{font-size: 16rem;}
+      section.PortfolioArea div.ListBox > ul.PfList{grid-template-columns: repeat(2, 1fr);}
+      .mb-none{display: none;}
+      section.PortfolioArea div.pfIntro > a{margin-left: 20px;}
     }
 
     @media screen and (max-width: 1024px){
-      
+      html{font-size: 50%;}
+      .ResizeSubwidth{width: calc(100% - 60px);}
+      section.PortfolioArea div.PfFull{padding: 0 30px 75px 30px;}
+      section.SkillArea{height: 100%;}
+      section.SkillArea div.SkillContent{display: block;}
+      section.SkillArea div.SkillContent > div{width: 100%;}
+      section.SkillArea div.SkillContent > div:first-of-type{margin-bottom: 40px;}
+      section.SkillArea div.SkillContent{padding: 115px 0;}
+      section.ContactArea{padding-bottom: 115px;}
+      .BackgroundText > span{font-size: 15rem;}
+      .TopText{left: 0;}
+      div.FullBox{left: calc(100% - 250px); max-width: 500px;}
     }
 
+    @media screen and (max-width: 740px){
+      
+    }
     
 
 
