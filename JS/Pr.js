@@ -65,6 +65,7 @@ const targetBack = document.querySelector('.DetailPop');
 const body = document.querySelector('body');
 const introCursorBox = document.querySelector('.IntroArea');
 const introCursor = document.querySelector('.IntroCursor');
+const mobileScreen = matchMedia("screen and (max-width: 740px)")
 
 function openPop(target) {
   const targetPopup = document.querySelector(`.${target}`);
@@ -102,6 +103,9 @@ function moveCursor(e) {
     setTimeout(() => {
       element.remove()
     }, 1000)
+  }
+  if(mobileScreen.matches){
+    introCursor.style.display = "none";
   }
 }
 

@@ -88,10 +88,10 @@
     div.DetailFUll{animation: Neon 3s infinite; position: absolute; left: 0; bottom: 0px; height: 100vh;background: linear-gradient(153.5deg ,#222222 50%, #ffa143 50%);}
     div.FullBox{padding-bottom: 40px; position: absolute; left: calc(50% - 442px); top: calc(50% - 342px); max-width: 984px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px white;}
     div.Opacity.active{opacity: 1; z-index: 100; transition-duration: 1s;transition-delay: 1s;}
-    div.FullBox h3{font-size: 4rem; text-align: center; padding: 40px 0 60px 0; font-weight: 500;}
+    div.FullBox h3{font-size: 4rem; text-align: center; margin: 40px 0 60px 0; font-weight: 500;}
     div.FullBox::after{content: ''; visibility: hidden; display: block; clear: both;}
     div.FullBox img{float: left; display: block; width: 100%; max-width: 250px; margin-left: 70px;}
-    div.TextBox{float: left; margin-left: 110px;}
+    div.TextBox{float: left; margin-left: 70px;}
     div.TextBox span:first-of-type{font-size: 3.5rem; display: inline-block; margin-bottom: 30px; font-weight: 700;}
     div.TextBox span:last-of-type{font-size: 3rem; display: inline-block; margin-left: 70px;}
     div.TextBox ul li{line-height: 30px; font-size: 1.7rem;}
@@ -254,11 +254,23 @@
       section.ContactArea{padding-bottom: 115px;}
       .BackgroundText > span{font-size: 15rem;}
       .TopText{left: 0;}
-      div.FullBox{left: calc(100% - 250px); max-width: 500px;}
+      div.FullBox{max-width: 500px; top: calc(50% - 370px); left: calc(50% - 250px);}
+      div.FullBox img{max-width: 210px; float: none; margin: 0 auto 20px;}
+      div.FullBox h3{margin: 40px 0;}
+      div.TextBox{float: none; width: calc(100% - 40px); margin: 0 auto;}
+      div.TextBox span:last-of-type{float: right; margin: 40px 40px 0 0;}
+      div.TextBox span:first-of-type{display: block; margin-bottom: 15px; text-align: center;}
+      div.TextBox ul.DetailFirst li.DetailliThree{margin-left: 5px;}
+      div.TextBox ul li{line-height: 1.5;}
     }
 
     @media screen and (max-width: 740px){
-      
+      section.AboutArea div.Diagonal2,
+      section.AboutArea div.Diagonal,
+      .BackgroundText{display: none;}
+      section.AboutArea div.AboutmeBox > div{margin: 0 auto;}
+      section.AboutArea div.AboutmeBox div.AboutLeft2 > img,
+      section.AboutArea div.AboutmeBox > div > img{right: calc(50% - 127.5px);}
     }
     
 
