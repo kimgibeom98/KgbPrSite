@@ -87,7 +87,7 @@
     div.Opacity{opacity: 0; z-index: -1; transition-property: opacity, z-index; width: 100%;}
     div.DetailFUll{animation: Neon 3s infinite; position: absolute; left: 0; bottom: 0px; height: 100vh;background: linear-gradient(153.5deg ,#222222 50%, #ffa143 50%);}
     div.FullBox{padding-bottom: 40px; position: absolute; left: calc(50% - 442px); top: calc(50% - 342px); max-width: 984px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px white;}
-    div.Opacity.active{opacity: 1; z-index: 100; transition-duration: 1s;transition-delay: 1s;}
+    div.Opacity.active{opacity: 1; z-index: 99; transition-duration: 1s;transition-delay: 1s;}
     div.FullBox h3{font-size: 4rem; text-align: center; margin: 40px 0 60px 0; font-weight: 500;}
     div.FullBox::after{content: ''; visibility: hidden; display: block; clear: both;}
     div.FullBox img{float: left; display: block; width: 100%; max-width: 250px; margin-left: 70px;}
@@ -156,7 +156,7 @@
     section.PortfolioArea div.pfIntro{margin-bottom: 50px; display: flex; align-items: end; justify-content: space-between;}
     section.PortfolioArea div.pfIntro p{ font-size: 2rem; color: white; line-height: 1.5;}
     section.PortfolioArea div.pfIntro p > a{color: #dc143c; font-size: 2rem;}
-    section.PortfolioArea div.pfIntro > a{padding: 0 40px; height: 50px; white-space: nowrap; background-color: #dc143c; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; color: white;}
+    section.PortfolioArea div.pfIntro > a{padding: 0 40px; max-width: 180px; height: 50px; white-space: nowrap; background-color: #dc143c; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; color: white;}
     section.PortfolioArea div.ListBox > ul.PfList{display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 2rem; }
     section.PortfolioArea div.ListBox > ul.PfList > li{width: 100%; background-color: #1d1d1d; box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12);}
     section.PortfolioArea div.ListBox > ul.PfList > li figure > img{width: 100%; display: block; max-width: 556px;}
@@ -180,8 +180,9 @@
 
     /* PORTFOLIOWhite str */
     section.PortfolioArea div.PfWhite{width: 100%; margin: 0 auto; height: 100%; color: white; z-index: 11; background-color: white; overflow: hidden; position: absolute; left: 0; bottom: 0;}
-    section.PortfolioArea div.PfFull{position: absolute; box-sizing: border-box; left: 0; bottom: 0; padding-bottom: 75px; width: 100%;}
-    section.PortfolioArea div.PfFull > div{max-width: 1574px; margin: 0 auto 50px;}
+    section.PortfolioArea div.PfFull{position: absolute; box-sizing: border-box; left: 0; bottom: 0; padding-bottom: 115px; width: 100%;}
+    section.PortfolioArea div.PfFull > div{max-width: 1574px; margin: 0 auto;}
+    section.PortfolioArea div.PfFull > div:first-of-type{margin-bottom: 50px;}
     section.PortfolioArea div.PfWhite div.pfIntro h2,
     section.PortfolioArea div.PfWhite div.pfIntro p{color: black;}
     /* PORTFOLIOWhite fin */
@@ -219,7 +220,7 @@
       section.AboutArea div.AboutmeBox p{margin: 300px 0 0 80px;}
       section.AboutArea div.AboutmeBox > div > img{right: -60px;}
       section.AboutArea div.AboutmeBox div.AboutLeft2 > img{right: -65px;}
-      section.PortfolioArea div.PfFull{padding: 0 20px 75px 20px;}
+      section.PortfolioArea div.PfFull{padding: 0 20px 115px 20px;}
       section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.SkillandBtn{height: 219px;}
       section.PortfolioArea div.ListBox > ul.PfList{grid-gap: 1rem;}
       section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a{padding: 0 15px;}
@@ -229,7 +230,7 @@
       section.ResizeWidth{width: 100%; margin: 0;}
       .ResizeSubwidth{width: calc(100% - 80px);}
       section.AboutArea div.AboutmeBox{padding-bottom: 40px;}
-      section.PortfolioArea div.PfFull{padding: 0 40px 75px 40px;}
+      section.PortfolioArea div.PfFull{padding: 0 40px 155px 40px;}
       div.FullBox{left: calc(50% - 492px);}
       section.AboutArea div.AboutmeBox > div{float: none;}
       section.AboutArea div.AboutmeBox p{float: none; margin-top: 20px; margin-left: 0;}
@@ -245,7 +246,7 @@
     @media screen and (max-width: 1024px){
       html{font-size: 50%;}
       .ResizeSubwidth{width: calc(100% - 60px);}
-      section.PortfolioArea div.PfFull{padding: 0 30px 75px 30px;}
+      section.PortfolioArea div.PfFull{padding: 0 30px 115px 30px;}
       section.SkillArea{height: 100%;}
       section.SkillArea div.SkillContent{display: block;}
       section.SkillArea div.SkillContent > div{width: 100%;}
@@ -254,7 +255,7 @@
       section.ContactArea{padding-bottom: 115px;}
       .BackgroundText > span{font-size: 15rem;}
       .TopText{left: 0;}
-      div.FullBox{max-width: 500px; top: calc(50% - 370px); left: calc(50% - 250px);}
+      div.FullBox{max-width: 500px; top: calc(50% - 370px); left: calc(50% - 250px); padding-bottom: 10px;}
       div.FullBox img{max-width: 210px; float: none; margin: 0 auto 20px;}
       div.FullBox h3{margin: 40px 0;}
       div.TextBox{float: none; width: calc(100% - 40px); margin: 0 auto;}
@@ -271,6 +272,18 @@
       section.AboutArea div.AboutmeBox > div{margin: 0 auto;}
       section.AboutArea div.AboutmeBox div.AboutLeft2 > img,
       section.AboutArea div.AboutmeBox > div > img{right: calc(50% - 127.5px);}
+      section.AboutArea div.Click{z-index: 1; color: white;}
+      section.AboutArea div.AboutmeBox p{text-align: center;}
+      section.AboutArea div.Click{bottom: 150px; right: 7%;}
+      section.AboutArea div.Click img{filter: invert();}
+      section.AboutArea div.ClickCheck2 span{color: black;}
+      section.AboutArea div.ClickCheck2 img{filter: none;}
+      section.AboutArea div.ClickCheck3{z-index: 9999; right: 40px; bottom: 25px;}
+      section.PortfolioArea div.ListBox > ul.PfList{grid-template-columns: repeat(1, 1fr);} 
+      section.PortfolioArea div.pfIntro{display: block;}
+      section.PortfolioArea div.pfIntro p{margin-bottom: 20px;}
+      section.ContactArea div.light{top: 8%;}
+      section.ContactArea div.wire{height: 25px;}
     }
     
 
