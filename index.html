@@ -254,7 +254,7 @@
             <li>- 감정에 따른 일기 리스트 정렬</li>
             <li>- 최신순, 오래된 순 선택하여 일기 리스트 정렬</li>
             <li>- localStorage를 이용한 일기 저장</li>
-            <li>- 날짜별 일기 저장</li>
+            <li>- 날짜별 일기 렌더링</li>
           </ul>
           <div class="DetailSubtext">
             <ol>
@@ -306,10 +306,11 @@
                 </div>
               </li>
               <li>
-                <h4>6. 날짜별 일기 저장</h4>
+                <h4>6. 날짜별 일기 렌더링</h4>
                 <div>
                   <p>
-
+                    렌더링하려는 날짜의 firstDay 즉 해당 연도와 월의 시작일과 lastDay 즉 해당 연도와 월의 마지막 날을 getTime 함수를 이용해 밀리세컨드로 저장합니다. 저장 후 Array.filter 메소드를 이용하여
+                    일기의 date 값이 firstDay보다 크거나 같고 lastDay보다 작거나 같은 일기를 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
