@@ -128,13 +128,13 @@
     /* PORTFOLIO str */
     /* DETAILPOP str*/
     .DetailPop{width: 100%; display: none; height: 100vh; margin: 0 auto; z-index: 999; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.5);}
-    .DetailPop > div{display: none; background-color: rgb(235, 235, 235); overflow-y: auto; padding: 90px 70px; box-sizing: border-box; height: 100%; width: calc(100% - 80px); max-width: 920px; margin: 0 auto;}
-    .DetailPop > button.CloseBtn{border: none; cursor: none; display: block; position: absolute; right: calc(25% + 40px); text-indent: -9999px; background: url('../img/close_pop.png') 50% 50% no-repeat; background-size: 20px 20px; width: 40px; height: 40px;}
+    .DetailPop > div{display: none; position: relative; background-color: rgb(235, 235, 235); overflow-y: auto; padding: 90px 70px; box-sizing: border-box; height: 100%; width: calc(100% - 80px); max-width: 920px; margin: 0 auto;}
+    .DetailPop button.CloseBtn{border: none; cursor: none; display: block; position: absolute; right: 40px; top: 20px; text-indent: -9999px; background: url('../img/close_pop.png') 50% 50% no-repeat; background-size: 20px 20px; width: 40px; height: 40px;}
     .DetailPop > div > h2{font-size: 3.5rem; border-bottom: 1px solid #c8c8c8; padding-bottom: 30px; margin-bottom: 30px;}
     .DetailPop > div > ul{padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid #c8c8c8;}
     .DetailPop > div > ul > li{display: flex;}
     .DetailPop > div > ul > li:not(:last-of-type){margin-bottom: 25px;}
-    .DetailPop > div > ul > li > *{font-size: 1.5rem; display: block;}
+    .DetailPop > div > ul > li > *{font-size: 1.5rem; line-height: 1.2; display: block;}
     .DetailPop > div > ul > li > span{width: 15%; color: #787878;}
     .DetailPop > div > ul > li > p{margin-left: 2%; width: 83%;}
     .DetailPop > div > ul > li > p > a{color: blue;}
@@ -263,6 +263,8 @@
       div.TextBox span:first-of-type{display: block; margin-bottom: 15px; text-align: center;}
       div.TextBox ul.DetailFirst li.DetailliThree{margin-left: 5px;}
       div.TextBox ul li{line-height: 1.5;}
+      .DetailPop > div{padding: 70px 30px;}
+      .DetailPop button.CloseBtn{right: 20px;}
     }
 
     @media screen and (max-width: 740px){
@@ -284,6 +286,7 @@
       section.PortfolioArea div.pfIntro p{margin-bottom: 20px;}
       section.ContactArea div.light{top: 8%;}
       section.ContactArea div.wire{height: 25px;}
+      .DetailPop > div > ul > li > span{width: 32%;}
     }
     
 

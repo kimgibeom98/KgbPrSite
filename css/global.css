@@ -45,7 +45,7 @@
 
     @media screen and (max-width: 1280px){
       header > div.LeftMenu{display: none;}
-      header div.MobileMenu{display: block; position: fixed; z-index: 9999; right: 40px; top: 25px; transform: rotate(0);}
+      header div.MobileMenu{display: block; position: fixed; z-index: 999; right: 40px; top: 25px; transform: rotate(0);}
       header div.MobileMenu.active{left: inherit;}
       .MobileTitlebox{display: flex;  justify-content: center; align-items: center; width: 50%; text-align: center; height: 120px;}
       .MobileTitlebox:first-of-type{background-color: black; margin-bottom: 50px;}
