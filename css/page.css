@@ -162,7 +162,7 @@
     section.PortfolioArea div.ListBox > ul.PfList > li figure > img{width: 100%; display: block; max-width: 556px;}
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption{padding: 15px; box-sizing: border-box;}
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption h3{font-weight: 700; font-size: 2.5rem; margin-bottom: 15px;}
-    section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption p{font-size: 1.7rem; color: white; display: block; margin-bottom: 45px;}
+    section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption p{font-size: 1.7rem; color: white; line-height: 1.3; display: block; margin-bottom: 45px;}
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption ul{display: flex; flex-wrap: wrap; margin-bottom: 20px;}
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption ul > li{margin: 0 6px 10px 6px; padding: 0 20px; height: 30px; background-color: rgba(55, 55, 67, 0.7); display: flex; align-items: center; justify-content: center; border-radius: 5px; font-size: 1.4rem; }
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.SkillandBtn{display: flex; justify-content: space-between; flex-direction: column; height: 178px;}
@@ -176,6 +176,8 @@
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a.GitSite{background-color: #fff; position: relative; color: black; padding-left: 45px; padding-right: 15px;}
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a.GitSite:hover{background: rgb(155, 155, 155);}
     section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a.GitSite::before{content: ''; position: absolute; left: 10px; width: 30px; height: 30px; background: url('../img/github2.png') 50% 50% no-repeat; background-size: 22px 22px;}
+    section.SubPortfolio > div:nth-of-type(2){max-width: 1708px; margin: 0 auto; width: calc(100% - 80px);}
+    section.SubPortfolio div.ListBox > ul.PfList > li figure > img{max-width: 100%;}
     /* PORTFOLIOBlack fin */
 
     /* PORTFOLIOWhite str */
@@ -230,7 +232,7 @@
       section.ResizeWidth{width: 100%; margin: 0;}
       .ResizeSubwidth{width: calc(100% - 80px);}
       section.AboutArea div.AboutmeBox{padding-bottom: 40px;}
-      section.PortfolioArea div.PfFull{padding: 0 40px 155px 40px;}
+      section.PortfolioArea div.PfFull{padding: 0 40px 115px 40px;}
       div.FullBox{left: calc(50% - 492px);}
       section.AboutArea div.AboutmeBox > div{float: none;}
       section.AboutArea div.AboutmeBox p{float: none; margin-top: 20px; margin-left: 0;}
@@ -265,6 +267,7 @@
       div.TextBox ul li{line-height: 1.5;}
       .DetailPop > div{padding: 70px 30px;}
       .DetailPop button.CloseBtn{right: 20px;}
+      section.SubPortfolio > div:nth-of-type(2){width: calc(100% - 60px);}
     }
 
     @media screen and (max-width: 740px){
@@ -287,8 +290,46 @@
       section.ContactArea div.light{top: 8%;}
       section.ContactArea div.wire{height: 25px;}
       .DetailPop > div > ul > li > span{width: 32%;}
+      section.PortfolioArea div.ListBox > ul.PfList > li figure > img{max-width: 100%;}
+      section.PortfolioArea div.pfIntro > a{margin-left: 0;}
+    }
+
+    @media screen and (max-width: 500px){
+      html{font-size: 45%;}
+      div.FullBox{left: 20px; width: calc(100% - 40px);}
+      section.AboutArea div.AboutmeBox > div{width: 100%; max-width: 400px;}
+      header > nav.HeaderMenu ul li:not(:last-of-type){margin-bottom: 25px;}
+      section.AboutArea div.Click{right: 10%;}
+      .ResizeSubwidth{width: calc(100% - 40px);}
+      section.PortfolioArea div.PfFull{padding: 0 20px 115px 20px;}
+      section.IntroArea > h1.IntroText div{font-size: 7rem;}
+      section.SkillArea div.SkillContent > div:last-of-type ul li img{max-width: 55px;}
+      section.ContactArea div.light{right: 22px;}
+      .DetailPop > div{padding: 50px 20px; width: calc(100% - 40px);}
+      section.SubPortfolio > div:nth-of-type(2){width: calc(100% - 40px);}
+      section.SkillArea div.SkillContent > div:first-of-type > div{padding: 20px;}
+      div.FullBox h3{margin: 20px 0;}
+      div.FullBox{top: 80px;}
+      div.FullBox img{max-width: 153px;}
+      div.TextBox span:last-of-type{margin-right: 0;}
+      div.TextBox ul.DetailFirst li.DetailliThree{margin-left: 0;}
+      div.DetailFUll{height: 100%;}
     }
     
+    @media screen and (max-width: 375px){
+      section.IntroArea > h1.IntroText div{font-size: 6rem;}
+      section.AboutArea div.AboutmeBox p,
+      section.IntroArea > h1.IntroText div:last-of-type{font-size: 2rem;}
+      section.PortfolioArea div.ListBox > ul.PfList > li figure figcaption div.BtnBox a{padding: 0 7px;}
+      section.ContactArea div.light.active{background: transparent;}
+      section.ContactArea div.light{top: 7%;}
+      div.TextBox ul.DetailFirst li.DetailliThree, div.TextBox ul.DetailFirst li.DetailliTwo{float: none;}
+      div.TextBox ul.DetailFirst li.DetailliOne{padding-bottom: 10px; margin-bottom: 10px;}
+      div.FullBox img{max-width: 150px;}
+      div.TextBox span:last-of-type{font-size: 2.3rem;}
+      .DetailPop > div > ul > li > span{width: 37%;}
+
+    }
 
 
 

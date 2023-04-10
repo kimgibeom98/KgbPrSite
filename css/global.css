@@ -58,3 +58,7 @@
       header > nav.HeaderMenu ul li a{font-size: 7rem;}
     }
 
+    @media screen and (max-width: 500px){
+        header div.MenuDefault{right: 20px;}
+    }
+

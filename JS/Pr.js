@@ -104,7 +104,7 @@ function moveCursor(e) {
       element.remove()
     }, 1000)
   }
-  if(mobileScreen.matches){
+  if (mobileScreen.matches) {
     introCursor.style.display = "none";
   }
 }
