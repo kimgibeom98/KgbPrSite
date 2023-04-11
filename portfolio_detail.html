@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/import.css">
   <link rel="shortcut icon" href="img/favicon.ico">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="JS/Pr.js" defer></script>
+  <script src="JS/common.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <img src="img/main_logo.png" alt="기범 메인로고">
         <span>FE Developer</span>
       </a>
-      <div class="MenuDefault Menu">
+      <div onclick="clickEven('.Menu')" class="MenuDefault Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -31,7 +31,7 @@
         <img src="img/github.png" alt="깃허브아이콘">
       </a>
     </div>
-    <div class="MenuDefault Menu MobileMenu">
+    <div onclick="clickEven('.Menu')" class="MenuDefault Menu MobileMenu">
       <span></span>
       <span></span>
       <span></span>

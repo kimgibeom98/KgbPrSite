@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="JS/Pr.js" defer></script>
+  <script src="JS/common.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <img src="img/main_logo.png" alt="기범 메인로고">
         <span>FE Developer</span>
       </a>
-      <div class="MenuDefault Menu">
+      <div onclick="clickEven('.Menu')" class="MenuDefault Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -30,7 +31,7 @@
         <img src="img/github.png" alt="깃허브아이콘">
       </a>
     </div>
-    <div class="MenuDefault Menu MobileMenu">
+    <div onclick="clickEven('.Menu')" class="MenuDefault Menu MobileMenu">
       <span></span>
       <span></span>
       <span></span>
@@ -93,7 +94,7 @@
           "꾸준히 성장하는 개발자가 되겠습니다."
         </p>
       </div>
-      <div class="ClickCheck Click">
+      <div onclick="clickEven('.Check'); clickEven('.Opacity')" class="ClickCheck Click">
         <span>click</span>
         <img src="img/check.png" alt="체크아이콘">
       </div>
@@ -110,7 +111,7 @@
             "꾸준히 성장하는 개발자가 되겠습니다."
           </p>
         </div>
-        <div class="ClickCheck2 Click">
+        <div onclick="clickEven('.Check'); clickEven('.Opacity') " class="ClickCheck2 Click">
           <span>click</span>
           <img src="img/check.png" alt="체크아이콘">
         </div>
@@ -118,7 +119,7 @@
       </div>
     </div>
     <div class="DetailFUll Opacity">
-      <div class="ClickCheck3 Click">
+      <div onclick="clickEven('.Check'); clickEven('.Opacity') " class="ClickCheck3 Click">
         <span>click</span>
         <img src="img/check.png" alt="체크아이콘">
       </div>
