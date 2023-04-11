@@ -1,16 +1,14 @@
 $(document).ready(function () {
-  // scrollEven str
   scrollEven("section.AboutArea", "section.AboutArea .whiteBackground");
   scrollEven("section#PORTFOLIO", "section.PortfolioArea .PfWhite");
   scrollEven(".ChildLine");
   scrollEven(".light");
-  // scrollEven fin
 });
 
 const introCursorBox = document.querySelector('.IntroArea');
 const introCursor = document.querySelector('.IntroCursor');
 
-// scrollEven str
+// 스크롤 이벤트 str
 function scrollEven(Scroll, BOX) {
   $(window).scroll(function () {
     var divOffsetTop = $(Scroll).offset().top;
@@ -38,8 +36,9 @@ function scrollEven(Scroll, BOX) {
     })
   });
 }
-// scrollEven fin
+// 스크롤 이벤트 fin
 
+// 마우스 이벤트 str
 function cursorOut() {
   introCursor.style.display = "none";
 }
@@ -65,6 +64,7 @@ function introMaincursro(e) {
     introCursor.style.display = "none";
   }
 }
+// 마우스 이벤트 fin
 
 introCursorBox.addEventListener("mouseleave", cursorOut);
 introCursorBox.addEventListener("mouseover", cursorIn);
