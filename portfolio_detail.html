@@ -65,13 +65,13 @@
   <section class="ResizeWidth PortfolioArea MenuActive SubPortfolio">
     <!-- detail pop str -->
     <div class="DetailPop">
-      <div class="EmotionDetail">
+      <div class="SimpleDetail">
         <button type="button" class="CloseBtn" onclick="closePop()">팝업닫기</button>
-        <h2>emotion-diary</h2>
+        <h2>simple-diary</h2>
         <ul>
           <li>
             <span>간단 소개</span>
-            <p>React로 제작한 토이프로젝트 감정일기장 입니다.</p>
+            <p>React로 제작한 토이프로젝트 SimpleDiary 입니다.</p>
           </li>
           <li>
             <span>사용 기술</span>
@@ -83,10 +83,10 @@
           </li>
           <li>
             <span>사이트 바로가기</span>
-            <p><a href="https://gibeom-project.web.app/" target="_blank">emotion-diary</a></p>
+            <p><a href="https://gibeom-project.web.app/" target="_blank">simple-diary</a></p>
           </li>
         </ul>
-        <img class="DetailImg" src="img/detail_emotion.png" alt="감정일기장상세">
+        <img class="DetailImg" src="img/detail_simple.png" alt="감정일기장상세">
         <div class="DetailText">
           <h3>소개</h3>
           <p>React 기초 문법 공부를 마친 후 공부한 내용을 활용해서 제작한 첫 React 토이 프로젝트입니다.<br>
@@ -96,7 +96,7 @@
             <li>- 일기생성</li>
             <li>- 일기수정</li>
             <li>- 일기삭제</li>
-            <li>- 감정에 따른 일기 리스트 정렬</li>
+            <li>- 일기검색</li>
             <li>- 최신순, 오래된 순 선택하여 일기 리스트 정렬</li>
             <li>- localStorage를 이용한 일기 저장</li>
             <li>- 날짜별 일기 렌더링</li>
@@ -107,8 +107,8 @@
                 <h4>1. 일기생성</h4>
                 <div>
                   <p>
-                    일기 생성 시 감정, 날짜, 내용 등을 state로 저장 후 Context API를 이용해 데이터를 전달 한 다음 useReducer를 이용하여 데이터를 localStorage
-                    저장소에 저장합니다.
+                    일기 생성 시 감정, 날짜, 내용 등을 state로 저장 후 Context API를 이용해 데이터를 전달 한 다음 useReducer를 이용하여 데이터를 localStorage에
+                    저장합니다.
                   </p>
                 </div>
               </li>
@@ -120,7 +120,7 @@
                     일기 데이터 배열 중에 URL ID 파라미터와 일치하는 일기를 렌더링해줍니다
                   </p>
                   <p>
-                    데이터 수정도 일기 생성과 마찬가지로 Context API를 이용해 데이터를 전달 후 localStorage 저장소에 저장합니다.
+                    데이터 수정도 일기 생성과 마찬가지로 Context API를 이용해 데이터를 전달 후 localStorage에 저장합니다.
                   </p>
                 </div>
               </li>
@@ -134,20 +134,19 @@
                 </div>
               </li>
               <li>
-                <h4>4. 정렬(최신순, 오래된순)</h4>
+                <h4>4. 일기검색</h4>
                 <div>
                   <p>
-                    Array.sort 메소드를 사용해서 일기의 date 값을 비교해 정렬 순서를 변경합니다.
+                    Array.filter 메소드를 이용해 input의 value 값이 배열의 title 값에 포함되어있는지 includes 메소드를 이용하여 비교하고 return 된 리스트를 화면에
+                    렌더링합니다.
                   </p>
                 </div>
               </li>
               <li>
-                <h4>5. 정렬(전부다, 좋음감정, 안좋은감정)</h4>
+                <h4>5. 정렬(최신순, 오래된순)</h4>
                 <div>
                   <p>
-                    감정별로 완전 좋음(1) ~ 끔찍함(5)을 기준으로 Array.filter 메소드를 이용해 감정이 3보다 크거나 같을 때 완전 좋음, 좋음, 그럭저럭 3보다 작을 때 나쁨,
-                    끔찍함을
-                    정렬합니다.
+                    Array.sort 메소드를 사용해서 일기의 date 값을 비교해서 정렬 합니다.
                   </p>
                 </div>
               </li>
@@ -171,7 +170,7 @@
         <ul>
           <li>
             <span>간단 소개</span>
-            <p>React로 제작한 토이프로젝트 감정일기장 입니다.</p>
+            <p>React로 제작한 토이프로젝트 날씨 앱 입니다.</p>
           </li>
           <li>
             <span>사용 기술</span>
@@ -183,7 +182,7 @@
           </li>
           <li>
             <span>사이트 바로가기</span>
-            <p><a href="#" target="_blank">weather-app</a></p>
+            <p><a href="https://react-weather-app-alpha-one.vercel.app/" target="_blank">weather-app</a></p>
           </li>
         </ul>
         <img class="DetailImg" src="img/detail_weather.png" alt="날씨앱상세">
@@ -208,8 +207,8 @@
                 <h4>1. 정각마다 날씨 정보 업데이트</h4>
                 <div>
                   <p>
-                    CRAWL 폴더에서 npm start시 정각마다 실행되는 스케줄러가 작동되어 axios.get으로 날씨 정보를 요청받은 후 axios.put으로 해당 데이터를 API 폴더에 있는
-                    db.json으로 전달해줍니다.
+                    openWeattherMap OPEN API를 사용하여 날씨 정보를 요청 후, response를 db.json에 저장했습니다. 유사 REST API와 동일한 json-server를
+                    통해 클라이언트에서 db.json에 데이터를 접근할 수 있게 구현했습니다
                   </p>
                 </div>
               </li>
@@ -217,7 +216,7 @@
                 <h4>2. 날씨 정보 상세, 5일 / 3시간 예보</h4>
                 <div>
                   <p>
-                    1번 동작으로 인해 API 폴더에 수집된 데이터를 APP 폴더에서 axios.get으로 요청받은 후 해당 정보를 렌더링해 줍니다.
+                    JSON서버로 API서버를 띄우고 API를 요청했습니다. 요청 후 전달받은 데이터를 렌더링 해 줍니다.
                   </p>
                 </div>
               </li>
@@ -233,7 +232,7 @@
                 <h4>4. 버튼 클릭 시 5일 / 3시간 예보 화면 변환</h4>
                 <div>
                   <p>
-                    현재 화면이 yview인지 xview인지를 state에 저장 후 버튼 클릭 시 옵셔널체이닝을 이용해서 yview일 때는 세로형으로 xview일 때는 가로형으로 렌더링해 줍니다.
+                    현재 화면이 yview인지 xview인지를 state에 저장 후 버튼 클릭 시 yview일 때는 세로형으로 xview일 때는 가로형으로 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
@@ -241,9 +240,8 @@
                 <h4>5. 한글, 영어 언어 선택</h4>
                 <div>
                   <p>
-                    select 박스 onChange 시 setLanguage(e.target.value)를 이용해 state를 변경합니다. 변경 후 state로 옵셔널체이닝을 이용해서 한글로
-                    보여줄지
-                    영어로 보여줄지 판별 후 렌더링해 줍니다.
+                    select 박스 onChange 시 setState(e.target.value)를 이용해 state를 변경합니다. 변경 후 state를 기준으로 한글로 보여줄지 영어로 보여줄지
+                    판별 후 렌더링해 줍니다.
                   </p>
                 </div>
               </li>
@@ -251,10 +249,11 @@
                 <h4>6. 날씨에 따른 style 변환</h4>
                 <div>
                   <p>
-                    2번 동작에서 axios.get으로 요청받은 후 현재 날씨가 Clear일 때와 그렇지 않을 때를 state에 저장 후 styled-components를 이용해 Props를 통한
+                    2번 동작에서 JSON서버에 GET요청을 보낸후 현재 날씨가 Clear일 때와 그렇지 않을 때를 state에 저장 후 styled-components를 이용해 Props를 통한
                     조건부 스타일링을 해줍니다.
                   </p>
                 </div>
+                
               </li>
             </ol>
           </div>
@@ -269,8 +268,8 @@
             <figure>
               <img src="img/portfolio10.png" alt="감정일기장">
               <figcaption>
-                <h3>emotion-diary</h3>
-                <p>React로 제작한 토이프로젝트 감정일기장 입니다.</p>
+                <h3>simple-diary</h3>
+                <p>React로 제작한 토이프로젝트 SimpleDiary 입니다.</p>
                 <div class="SkillandBtn">
                   <ul>
                     <li>#React</li>
@@ -281,8 +280,8 @@
                   </ul>
                   <div class="BtnBox">
                     <a href="https://gibeom-project.web.app/" class="GoSite" target="_blank">사이트 바로가기</a>
-                    <a href="javascript:openPop('EmotionDetail');" class="DetailBtn">Detail</a>
-                    <a href="https://github.com/kimgibeom98/react-emotion-diary" class="GitSite"
+                    <a href="javascript:openPop('SimpleDetail');" class="DetailBtn">Detail</a>
+                    <a href="https://github.com/kimgibeom98/react-simple-diary" class="GitSite"
                       target="_blank">GitHub</a>
                   </div>
                 </div>
@@ -307,7 +306,7 @@
                     <li>#Moment.js</li>
                   </ul>
                   <div class="BtnBox">
-                    <a href="#" class="GoSite">사이트 바로가기</a>
+                    <a href="https://react-weather-app-alpha-one.vercel.app/" target="_blank" class="GoSite">사이트 바로가기</a>
                     <a href="javascript:openPop('WeatherDetail');" class="DetailBtn">Detail</a>
                     <a href="https://github.com/kimgibeom98/react-weather-app" class="GitSite"
                       target="_blank">GitHub</a>
